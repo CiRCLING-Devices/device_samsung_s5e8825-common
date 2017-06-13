@@ -186,6 +186,8 @@ on init
 
     start watchdogd
 
+    setprop ro.boot.hardware.revision ${ro.revision}
+
 on post-fs
     # set RLIMIT_MEMLOCK to 64KB
     setrlimit 8 65536 65536
