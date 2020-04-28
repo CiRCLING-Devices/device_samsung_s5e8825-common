@@ -20,6 +20,9 @@ persist.log.tag.ContrastColorUtil=S
 persist.log.tag.GRALLOC=S
 persist.log.tag.gralloc4=S
 
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
 # Vsync
 debug.cpurend.vsync=false
 
