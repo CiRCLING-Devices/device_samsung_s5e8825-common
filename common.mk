@@ -25,6 +25,10 @@ $(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 450dpi
