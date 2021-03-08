@@ -54,6 +54,9 @@ fs_mgr.overlayfs.prefer_cache_backing_storage=true
 # FRP
 ro.frp.pst=
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # LMK
 ro.lmk.filecache_min_kb=153600
 ro.lmk.kill_timeout_ms=50
