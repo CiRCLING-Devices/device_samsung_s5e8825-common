@@ -38,7 +38,3 @@ def OTA_InstallEnd(info):
   PrintInfo(info, "/dev/block/by-name/dtbo")
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
   return
-
-def FullOTA_InstallBegin(info):
-  AddImage(info, "super_empty.img", "/dev/block/by-name/super")
-  return
