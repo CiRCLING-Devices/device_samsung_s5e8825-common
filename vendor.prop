@@ -99,6 +99,10 @@ vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 ro.product_ship=true
 ro.vendor.cscsupported=1
 
+# Soc
+ro.soc.manufacturer=Samsung
+ro.soc.model=Exynos 1280
+
 # SurfaceFlinger
 debug.sf.enable_gl_backpressure=false
 ro.surface_flinger.support_kernel_idle_timer=true
