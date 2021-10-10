@@ -118,7 +118,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 
 # Graphics
-TARGET_USES_VULKAN := false
+TARGET_USES_VULKAN := true
 BOARD_USES_HWC_CPU_PERF_MODE := true
 
 # Kernel
