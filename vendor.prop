@@ -46,6 +46,7 @@ ro.frp.pst=
 # LMK
 ro.lmk.filecache_min_kb=153600
 ro.lmk.kill_timeout_ms=50
+ro.lmk.stall_limit_critical=40
 ro.lmk.kill_heaviest_task=true
 
 # Metadata Encryption
