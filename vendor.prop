@@ -33,6 +33,7 @@ bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
 # Camera
+vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram
 vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
 
 # Codec2
