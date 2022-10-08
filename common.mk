@@ -186,6 +186,9 @@ $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 # Live Display
 PRODUCT_PACKAGES += vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
+# Log Tag
+include $(COMMON_PATH)/vendor_logtag.mk
+
 # Memtrack
 PRODUCT_PACKAGES += android.hardware.memtrack-service.samsung-mali
 
