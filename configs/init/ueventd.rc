@@ -291,3 +291,6 @@
 /dev/input/event*				0660	system	input
 /sys/devices/virtual/input/input*   enable      0660	system	input
 /sys/devices/virtual/input/input*   poll_delay  0660	system	input
+
+# NFC
+/dev/st21nfc              0660   nfc        nfc
