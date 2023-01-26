@@ -434,6 +434,9 @@ on boot
     write /sys/module/scsc_mx/parameters/disable_recovery_handling 2
     #settings put global captive_portal_mode 0
 
+    # Default country code
+    setprop ro.boot.wificountrycode 00
+
     # Change permission for A-Box firmware logs file & GPR dump
     chown audioserver system /sys/devices/platform/14e50000.abox/0.abox-debug/gicd
     chown audioserver system /sys/devices/platform/14e50000.abox/0.abox-debug/gpr
