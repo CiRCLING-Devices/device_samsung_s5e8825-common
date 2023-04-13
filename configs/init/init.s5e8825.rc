@@ -447,6 +447,8 @@ on boot
 
     setprop wifi.interface wlan0
 
+    write /proc/sys/vm/watermark_scale_factor 200
+
     # SCSC do not enable autorecovery in dev builds
     write /sys/module/scsc_mx/parameters/disable_recovery_handling 2
     #settings put global captive_portal_mode 0
