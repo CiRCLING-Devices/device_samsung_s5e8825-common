@@ -99,7 +99,7 @@ vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 ro.product_ship=true
 ro.vendor.cscsupported=1
 
-# Soc
+# SoC
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 1280
 
@@ -109,3 +109,8 @@ ro.surface_flinger.support_kernel_idle_timer=true
 
 # Wi-Fi
 wifi.direct.interface=p2p0
+
+# Vibrator
+ro.vendor.vibrator_hal.click_duration=50
+ro.vendor.vibrator_hal.tick_duration=45
+ro.vendor.vibrator_hal.texture_tick_duration=30
