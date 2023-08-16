@@ -1465,3 +1465,6 @@ on property:sys.boot_completed=1
     chmod 0644 /sys/kernel/gpu/gpu_governor
     chmod 0644 /sys/kernel/gpu/gpu_max_clock
     chmod 0664 /sys/kernel/gpu/gpu_min_clock
+
+    # Only owner can acces this node
+    chmod 440 /proc/net/unix
