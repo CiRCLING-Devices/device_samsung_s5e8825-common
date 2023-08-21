@@ -18,6 +18,7 @@ persist.log.tag.b/223498680=S
 persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.GRALLOC=S
+persist.log.tag.gralloc4=S
 
 # Vsync
 debug.cpurend.vsync=false
