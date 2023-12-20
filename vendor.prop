@@ -53,6 +53,7 @@ fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
+debug.sf.enable_transaction_tracing=false
 
 # FRP
 ro.frp.pst=
