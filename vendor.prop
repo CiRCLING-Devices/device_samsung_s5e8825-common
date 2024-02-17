@@ -1,3 +1,6 @@
+# AB
+ro.virtual_ab.compression.threads=true
+
 # Adoptable Storage
 ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 
