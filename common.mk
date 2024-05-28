@@ -236,6 +236,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.samsung
 
+# Update
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
