@@ -411,6 +411,9 @@ on early-boot
     verity_update_state
 
 on boot
+    # Background throttling
+    write /sys/block/sda/queue/wbt_lat_usec 75000
+
     # SDHMS Slowdown : Cpuset
     mkdir /dev/cpuset/abnormal
     write /dev/cpuset/abnormal/cpus 0-3
