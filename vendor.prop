@@ -42,6 +42,9 @@ fs_mgr.overlayfs.prefer_cache_backing_storage=true
 # FRP
 ro.frp.pst=
 
+# LMK
+ro.lmk.kill_heaviest_task=true
+
 # Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.metadata_init_delete_all_keys.enabled=true
