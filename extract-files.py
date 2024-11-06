@@ -13,9 +13,8 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_vendorcompat,
+    lib_fixups,
     lib_fixups_user_type,
-    libs_proto_3_9_1,
 )
 
 namespace_imports = [
@@ -32,7 +31,7 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 
 
 lib_fixups: lib_fixups_user_type = {
-    libs_proto_3_9_1: lib_fixup_vendorcompat,
+    **lib_fixups,
     'libuuid': lib_fixup_vendor_suffix,
 }  # fmt: skip
 
