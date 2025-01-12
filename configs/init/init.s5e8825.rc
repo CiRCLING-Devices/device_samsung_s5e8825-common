@@ -31,6 +31,9 @@ on init
     chown system system /sys/kernel/asv/power_model_2
     chown system system /sys/kernel/asv/power_model_3
 
+    # Limit discard size to 128MB in order to avoid long IO latency
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
     # SCSC BT
     chown bluetooth bluetooth /sys/module/scsc_bt/parameters/bluetooth_address
 
