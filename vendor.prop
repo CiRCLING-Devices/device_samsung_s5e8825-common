@@ -60,4 +60,5 @@ vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 
 # SurfaceFlinger
+debug.sf.enable_gl_backpressure=false
 ro.surface_flinger.support_kernel_idle_timer=true
