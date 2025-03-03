@@ -12,8 +12,9 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mz_tee_driver.ko
 
 on init
-    # AFC permissions for fastcharge
+    # Permissions for fastcharge
     chown system radio /sys/class/sec/switch/afc_disable
+    chown system system /sys/class/power_supply/battery/charging_enabled
 
     # Disable UFS powersaving
     write /sys/devices/platform/13500000.ufs/clkgate_enable 0
