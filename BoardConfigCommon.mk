@@ -48,6 +48,7 @@ BOARD_RECOVERY_DTB_OFFSET := 0x00000000
 BOARD_RECOVERY_HEADER_VERSION := 2
 BOARD_TAGS_OFFSET := 0x00000000
 BOARD_KERNEL_CMDLINE := \
+    androidboot.console=0 \
     bootconfig \
     printk.devkmsg=on \
     kasan=off
