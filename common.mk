@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Private keys
 $(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
 
+# Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 450dpi
