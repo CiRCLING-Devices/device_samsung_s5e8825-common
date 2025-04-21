@@ -62,6 +62,7 @@ debug.sf.early.app.duration=18600000
 debug.sf.earlyGl.sf.duration=18600000
 debug.sf.earlyGl.app.duration=18600000
 debug.sf.use_phase_offsets_as_durations=1
+persist.mm.enable.prefetch=true
 ro.hardware.egl=mali
 ro.hardware.vulkan=mali
 ro.opengles.version=196610
