@@ -112,6 +112,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl \
     android.hardware.composer.hwc3-service.slsi
 
+TARGET_SCREEN_DENSITY := 450
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
