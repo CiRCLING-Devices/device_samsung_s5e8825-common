@@ -84,6 +84,7 @@ ro.lmk.filecache_min_kb=153600
 ro.lmk.kill_timeout_ms=50
 ro.lmk.stall_limit_critical=40
 ro.lmk.kill_heaviest_task=true
+ro.lmk.log_stats=false
 
 # Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
