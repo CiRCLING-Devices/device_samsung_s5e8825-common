@@ -28,6 +28,7 @@ vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
 debug.stagefright.c2inputsurface=-1
 
 # Display
+debug.sf.disable_client_composition_cache=0
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
