@@ -73,6 +73,7 @@ ro.vendor.ddk.set.afbc=1
 debug.hwui.skia_atrace_enabled=false
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+debug.sf.enable_adpf_cpu_hint=true
 
 # FRP
 ro.frp.pst=
