@@ -13,6 +13,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.ContrastColorUtil=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.gralloc4=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GRALLOC=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.hwcomposer=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.HWUI=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.IntervalStats=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.KernelCpuUidActiveTimeReader=$(VENDOR_LOG_LEVEL) \
