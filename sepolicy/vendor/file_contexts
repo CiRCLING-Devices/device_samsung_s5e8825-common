@@ -63,6 +63,7 @@
 /sys/devices/platform/shub/iio:device[0-9]*(/.*)               u:object_r:sysfs_iio:s0
 /sys/devices/platform/shub/iio:device[0-9]*/buffer/enable      u:object_r:sysfs_sensors_writable:s0
 /sys/devices/platform/shub/iio:device[0-9]*/buffer/length      u:object_r:sysfs_sensors_writable:s0
+/dev/ssp                                                       u:object_r:ssp_device:s0
 
 # GPS
 /sys/devices/soc0/machine                                     u:object_r:sysfs_sec_gps:s0
@@ -70,6 +71,9 @@
 
 # Proca
 /(vendor|system/vendor)/bin/vendor\.samsung\.hardware\.security\.proca@2\.0-service         u:object_r:hal_proca_default_exec:s0
+
+# k250a
+/dev/k250a                                                    u:object_r:k250a_device:s0
 
 # Wakeup
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                 u:object_r:sysfs_wakeup:s0
