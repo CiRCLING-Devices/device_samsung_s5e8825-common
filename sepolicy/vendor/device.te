@@ -2,3 +2,4 @@ type m2m1shot_device, dev_type;
 type secmem_device, dev_type;
 type st21nfc_device, dev_type;
 type k250a_device, dev_type;
+type spu_block_device, dev_type;
