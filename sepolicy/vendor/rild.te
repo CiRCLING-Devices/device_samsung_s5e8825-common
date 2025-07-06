@@ -18,6 +18,7 @@ allow rild log_vendor_data_file:file create_file_perms;
 
 set_prop(rild, vendor_radio_prop)
 set_prop(rild, radio_prop)
+get_prop(rild, vendor_vaultkeeper_prop)
 
 dontaudit rild system_prop:file read;
 allow rild rild:unix_stream_socket connectto;
