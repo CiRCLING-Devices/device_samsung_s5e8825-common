@@ -3,6 +3,8 @@ type hermesd_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hermesd)
 
 hal_client_domain(hermesd, hal_weaver)
+hal_server_domain(hermesd, hal_weaver)
+
 hwbinder_use(hermesd)
 binder_call(hermesd, hal_weaver_server)
 binder_call(hermesd, servicemanager)
