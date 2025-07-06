@@ -4,6 +4,9 @@ persist.vendor.sys.camera.    u:object_r:vendor_camera_prop:s0
 # HWC
 vendor.hwc.                   u:object_r:vendor_hwc_prop:s0
 
+# Hermes
+vendor.securehw.available     u:object_r:vendor_hermes_prop:s0
+
 # Vaultkeeper
 ro.vendor.factory_binary      u:object_r:vendor_vaultkeeper_prop:s0
 

@@ -7,6 +7,8 @@ hwbinder_use(hermesd)
 binder_call(hermesd, hal_weaver_server)
 binder_call(hermesd, servicemanager)
 
+add_service(hermesd, hermes_command_service)
+
 allow hermesd hwservicemanager:binder call;
 allow hermesd hwservicemanager_prop:file { getattr map open read };
 allow hermesd init:unix_stream_socket connectto;
@@ -20,3 +22,5 @@ allow hermesd vendor_data_file:dir { write };
 allow hermesd vendor_data_file:dir { add_name };
 
 dontaudit hermesd exported_default_prop:property_service set;
+
+set_prop(hermesd, vendor_hermes_prop)
