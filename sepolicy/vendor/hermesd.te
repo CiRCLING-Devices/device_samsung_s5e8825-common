@@ -5,6 +5,7 @@ init_daemon_domain(hermesd)
 hal_client_domain(hermesd, hal_weaver)
 hwbinder_use(hermesd)
 binder_call(hermesd, hal_weaver_server)
+binder_call(hermesd, servicemanager)
 
 allow hermesd hwservicemanager:binder call;
 allow hermesd hwservicemanager_prop:file { getattr map open read };
