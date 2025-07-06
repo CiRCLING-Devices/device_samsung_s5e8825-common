@@ -91,3 +91,6 @@
 # Weaver
 /(vendor|system/vendor)/bin/hermesd         u:object_r:hermesd_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.security\.hermes-service      u:object_r:hermesd_exec:s0
+
+# Weaver firmware files
+/vendor/etc/secnvm(/.*)?     u:object_r:secnvm_vendor_etc_file:s0
