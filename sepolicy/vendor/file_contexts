@@ -54,6 +54,7 @@
 /sys/devices/platform/(.*)/block/mmcblk0/mmcblk0p[0-9]+/start u:object_r:sysfs_block:s0
 
 # Camera
+/sys/devices/virtual/camera/flash/rear_flash                  u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera/rear/fw_update                    u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera/rear/ssrm_camera_info             u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
