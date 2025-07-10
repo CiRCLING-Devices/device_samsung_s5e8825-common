@@ -586,14 +586,16 @@ on boot
     chmod 0664 /sys/class/usb_notify/usb_control/usb_data_enabled
 
 on early-fs
+    mount_all /vendor/etc/fstab.${ro.hardware} --early
     write /sys/devices/platform/fmp/fmp-fips/fmp_fips_run 1
 
 on late-fs
+    start bootanim
+    class_start animation
     mount_all /vendor/etc/fstab.${ro.hardware} --late
 
 on fs
     start hwservicemanager
-    mount_all /vendor/etc/fstab.${ro.hardware} --early
 
     wait /dev/block/by-name/sec_efs
     mount ext4 /dev/block/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
@@ -843,12 +845,6 @@ on property:ro.factory.factory_binary=factory
     chown system system /sys/kernel/asv-g/modem_fused_volt
     chown system system /sys/kernel/asv-g/modem_grp_volt
 
-# Create carrier folder for HiddenMenu
-on post-fs
-    mkdir /efs/carrier 0755 radio system
-    chown radio system /efs/carrier
-    chown radio system /efs/carrier/HiddenMenu
-
 # Kernel Core Memory
 on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.${ro.hardware}
@@ -857,3 +853,8 @@ on property:sys.boot_completed=1
 
     # Stop statsd
     stop statsd
+
+    # Create carrier folder for HiddenMenu
+    mkdir /efs/carrier 0755 radio system
+    chown radio system /efs/carrier
+    chown radio system /efs/carrier/HiddenMenu
