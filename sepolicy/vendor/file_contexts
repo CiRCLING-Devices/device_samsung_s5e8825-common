@@ -107,3 +107,6 @@
 
 # Audio
 /vendor/bin/hw/secaudiohalaidl                                u:object_r:hal_audio_default_exec:s0
+
+## DMA
+/dev/dmabuf_container                                         u:object_r:vendor_bufcon_device:s0
