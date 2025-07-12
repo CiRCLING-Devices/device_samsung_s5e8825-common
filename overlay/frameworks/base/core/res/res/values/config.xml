@@ -297,7 +297,6 @@
     <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
     <bool name="config_telephony5gNonStandalone">true</bool>
 
-
     <!-- Minimum screen brightness setting allowed by power manager.
          -2 is invalid so setting will resort to int value specified above.
          Set this to 0.0 to allow screen to go to minimal brightness.
@@ -320,4 +319,19 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">12</integer>
     <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.047058824</item>
+
+    <!-- Available color modes exposed to userspace. -->
+    <!--
+         COLOR_MODE_NATURAL:        0 (uses colorimetric render intents)
+         COLOR_MODE_BOOSTED:        1 (10% boost using the PCC)
+         COLOR_MODE_SATURATED:      2 (non-colorimetric wide gamut rendering)
+         COLOR_MODE_AUTOMATIC:      3 (enhanced render intents)
+    -->
+    <integer-array name="config_availableColorModes">
+        <item>0</item> <!-- COLOR_MODE_NATURAL -->
+        <item>1</item> <!-- COLOR_MODE_BOOSTED -->
+        <item>2</item> <!-- COLOR_MODE_SATURATED -->
+        <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
+    </integer-array>
+
 </resources>
