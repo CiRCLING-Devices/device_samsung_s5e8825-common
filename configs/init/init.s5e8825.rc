@@ -1,3 +1,5 @@
+import /vendor/etc/init/hw/init.s5e8825.unify.rc
+
 on early-init
     mkdir /mnt/vendor/efs 0771 radio system
     mkdir /mnt/vendor/cpefs 0771 radio system
