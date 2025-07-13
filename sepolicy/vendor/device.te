@@ -4,3 +4,6 @@ type st21nfc_device, dev_type;
 type k250a_device, dev_type;
 type spu_block_device, dev_type;
 type fingerprint_device, dev_type;
+
+# FM Radio
+type fm_device, dev_type;
