@@ -18,6 +18,13 @@ package org.lineageos.dap
 
 import android.content.Context
 import android.media.audiofx.AudioEffect
+import android.media.AudioManager
+import android.media.AudioDeviceInfo
+import android.content.SharedPreferences
+import androidx.preference.PreferenceManager
+import android.util.Log
+import android.os.Handler
+import android.os.Looper
 
 import org.lineageos.dap.DolbyFragment.Companion.PREF_DOLBY_MODES
 
@@ -39,9 +46,97 @@ object DolbyCore {
     const val PROFILE_GAME_2 = 7
     const val PROFILE_SPACIAL_AUDIO = 8
 
-    private val audioEffect = runCatching {
-        AudioEffect(EFFECT_TYPE_DAP, AudioEffect.EFFECT_TYPE_NULL, 0, 0)
-    }.getOrNull()
+    private var audioEffect: AudioEffect? = createAudioEffect()
+    private var lastDevice: OutputDevice? = null
+
+    private fun createAudioEffect(): AudioEffect? {
+        return runCatching {
+            AudioEffect(EFFECT_TYPE_DAP, AudioEffect.EFFECT_TYPE_NULL, 0, 0)
+        }.getOrNull()
+    }
+
+    enum class OutputDevice(val key: String) {
+        SPEAKER("speaker"),
+        HEADPHONES("headphones"),
+        BLUETOOTH("bluetooth"),
+        OTHER("other")
+    }
+
+    private const val TAG = "DolbyCore"
+
+    fun getCurrentOutputDevice(context: Context): OutputDevice {
+        val am = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        val devices = am.getDevices(AudioManager.GET_DEVICES_OUTPUTS)
+        var detected: OutputDevice = OutputDevice.OTHER
+        devices.forEach {
+            when (it.type) {
+                AudioDeviceInfo.TYPE_BLUETOOTH_A2DP,
+                AudioDeviceInfo.TYPE_BLUETOOTH_SCO -> detected = OutputDevice.BLUETOOTH
+                AudioDeviceInfo.TYPE_WIRED_HEADPHONES,
+                AudioDeviceInfo.TYPE_WIRED_HEADSET,
+                AudioDeviceInfo.TYPE_USB_HEADSET -> detected = OutputDevice.HEADPHONES
+                AudioDeviceInfo.TYPE_BUILTIN_SPEAKER -> detected = OutputDevice.SPEAKER
+            }
+        }
+        return detected
+    }
+
+    private fun getPrefs(context: Context): SharedPreferences =
+        PreferenceManager.getDefaultSharedPreferences(context)
+
+    fun setEnabled(context: Context, enabled: Boolean) {
+        val device = getCurrentOutputDevice(context)
+        val prefs = getPrefs(context)
+        val key = "enabled_${device.key}"
+        prefs.edit().putBoolean(key, enabled).apply()
+        audioEffect?.enabled = enabled
+        Log.i(TAG, "Set enabled=$enabled for device=${device.name}")
+    }
+
+    fun isEnabled(context: Context): Boolean {
+        val device = getCurrentOutputDevice(context)
+        val prefs = getPrefs(context)
+        val key = "enabled_${device.key}"
+        val value = prefs.getBoolean(key, false)
+        Log.i(TAG, "isEnabled for device=${device.name} = $value")
+        return value
+    }
+
+    fun applyCurrentDeviceState(context: Context) {
+        val device = getCurrentOutputDevice(context)
+        val enabled = isEnabled(context)
+        val profile = getProfile()
+        val handler = Handler(Looper.getMainLooper())
+        if (lastDevice != device) {
+            Log.i(TAG, "Output device changed: ${lastDevice?.name} -> ${device.name}, resetting AudioEffect")
+            audioEffect?.release()
+            audioEffect = null
+            lastDevice = device
+            handler.postDelayed({
+                audioEffect = createAudioEffect()
+                audioEffect?.setParameter(EFFECT_PARAM_EFF_ENAB, 1)
+                audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
+                audioEffect?.enabled = false
+                handler.postDelayed({
+                    audioEffect?.enabled = enabled
+                    Log.i(TAG, "applyCurrentDeviceState: enabled=$enabled, profile=$profile for device ${device.name}")
+                }, 100)
+            }, 100)
+        } else {
+            audioEffect?.setParameter(EFFECT_PARAM_EFF_ENAB, 1)
+            audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
+            audioEffect?.enabled = false
+            handler.postDelayed({
+                audioEffect?.enabled = enabled
+                Log.i(TAG, "applyCurrentDeviceState: enabled=$enabled, profile=$profile for device ${device.name}")
+            }, 100)
+        }
+    }
+
+    fun setProfile(profile: Int) {
+        audioEffect?.setParameter(EFFECT_PARAM_EFF_ENAB, 1)
+        audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
+    }
 
     fun getProfile(): Int {
         val out = intArrayOf(PROFILE_AUTO)
@@ -57,15 +152,4 @@ object DolbyCore {
                 resourceName, "string", context.packageName
         ))
     }
-
-    fun setProfile(profile: Int) {
-        audioEffect?.setParameter(EFFECT_PARAM_EFF_ENAB, 1)
-        audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
-    }
-
-    fun setEnabled(enabled: Boolean) {
-        audioEffect?.enabled = enabled
-    }
-
-    fun isEnabled() = audioEffect?.enabled ?: false
 }

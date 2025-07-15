@@ -28,13 +28,17 @@ import org.lineageos.dap.DolbyFragment.Companion.PREF_DOLBY_MODES
 class BootCompletedReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        val sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context)
-        for ((key, value) in PREF_DOLBY_MODES) {
-            if (sharedPrefs.getBoolean(key, false)) {
-                DolbyCore.setProfile(value)
-                break
-            }
+        // Restore per-device state for all known device types
+        for (device in DolbyCore.OutputDevice.values()) {
+            val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+            val profileKey = "profile_${device.key}"
+            val enabledKey = "enabled_${device.key}"
+            // If not set, skip
+            if (!prefs.contains(profileKey) && !prefs.contains(enabledKey)) continue
         }
-        DolbyCore.setEnabled(sharedPrefs.getBoolean(PREF_DOLBY_ENABLE, false))
+        // Apply state for the current output device
+        DolbyCore.applyCurrentDeviceState(context)
+        // Start the device monitor service
+        context.startService(Intent(context, DolbyDeviceMonitorService::class.java))
     }
 }

@@ -34,12 +34,12 @@ class DolbyTile : TileService() {
 
     override fun onStartListening() {
         super.onStartListening()
-        isEnabled = DolbyCore.isEnabled()
+        isEnabled = DolbyCore.isEnabled(this)
     }
 
     override fun onClick() {
         isEnabled = !isEnabled
-        DolbyCore.setEnabled(isEnabled)
+        DolbyCore.setEnabled(this, isEnabled)
         PreferenceManager.getDefaultSharedPreferences(this)
                 .edit()
                 .putBoolean(PREF_DOLBY_ENABLE, isEnabled)

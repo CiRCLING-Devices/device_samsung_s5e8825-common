@@ -36,7 +36,7 @@ class DolbyFragment : PreferenceFragment(), OnCheckedChangeListener {
 
         switchBar = findPreference<MainSwitchPreference>(PREF_DOLBY_ENABLE)!!
         switchBar.addOnSwitchChangeListener(this)
-        switchBar.isChecked = DolbyCore.isEnabled()
+        switchBar.isChecked = DolbyCore.isEnabled(activity!!)
 
         for ((key, value) in PREF_DOLBY_MODES) {
             val preference = findPreference<SelectorWithWidgetPreference>(key)!!
@@ -48,7 +48,7 @@ class DolbyFragment : PreferenceFragment(), OnCheckedChangeListener {
     }
 
     override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
-        DolbyCore.setEnabled(isChecked)
+        DolbyCore.setEnabled(activity!!, isChecked)
     }
 
     private fun setProfile(profile: Int) {
