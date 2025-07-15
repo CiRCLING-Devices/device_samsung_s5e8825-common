@@ -105,7 +105,7 @@ object DolbyCore {
     fun applyCurrentDeviceState(context: Context) {
         val device = getCurrentOutputDevice(context)
         val enabled = isEnabled(context)
-        val profile = getProfile()
+        val profile = getProfile(context)
         val handler = Handler(Looper.getMainLooper())
         if (lastDevice != device) {
             Log.i(TAG, "Output device changed: ${lastDevice?.name} -> ${device.name}, resetting AudioEffect")
@@ -115,39 +115,44 @@ object DolbyCore {
             handler.postDelayed({
                 audioEffect = createAudioEffect()
                 audioEffect?.setParameter(EFFECT_PARAM_EFF_ENAB, 1)
-                audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
                 audioEffect?.enabled = false
                 handler.postDelayed({
                     audioEffect?.enabled = enabled
+                    audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
                     Log.i(TAG, "applyCurrentDeviceState: enabled=$enabled, profile=$profile for device ${device.name}")
                 }, 100)
             }, 100)
         } else {
             audioEffect?.setParameter(EFFECT_PARAM_EFF_ENAB, 1)
-            audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
             audioEffect?.enabled = false
             handler.postDelayed({
                 audioEffect?.enabled = enabled
+                audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
                 Log.i(TAG, "applyCurrentDeviceState: enabled=$enabled, profile=$profile for device ${device.name}")
             }, 100)
         }
     }
 
-    fun setProfile(profile: Int) {
-        audioEffect?.setParameter(EFFECT_PARAM_EFF_ENAB, 1)
-        audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
+    fun setProfile(context: Context, profile: Int) {
+        val device = getCurrentOutputDevice(context)
+        val prefs = getPrefs(context)
+        val key = "profile_${device.key}"
+        prefs.edit().putInt(key, profile).apply()
+        if (audioEffect != null && isEnabled(context)) {
+            audioEffect?.setParameter(EFFECT_PARAM_PROFILE, profile)
+        }
     }
 
-    fun getProfile(): Int {
-        val out = intArrayOf(PROFILE_AUTO)
-        audioEffect?.getParameter(EFFECT_PARAM_PROFILE, out)
-        return out.first().coerceIn(PROFILE_AUTO, PROFILE_SPACIAL_AUDIO)
+    fun getProfile(context: Context): Int {
+        val device = getCurrentOutputDevice(context)
+        val prefs = getPrefs(context)
+        val key = "profile_${device.key}"
+        return prefs.getInt(key, PROFILE_AUTO)
     }
 
     fun getProfileName(context: Context): String {
-        val profile = getProfile()
+        val profile = getProfile(context)
         val resourceName = PREF_DOLBY_MODES.filter { it.value == profile }.keys.first()
-
         return context.resources.getString(context.resources.getIdentifier(
                 resourceName, "string", context.packageName
         ))

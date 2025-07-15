@@ -44,6 +44,7 @@ class DolbyFragment : PreferenceFragment(), OnCheckedChangeListener {
                 setProfile(value)
                 true
             }
+            preference.isChecked = value == DolbyCore.getProfile(activity!!)
         }
     }
 
@@ -52,7 +53,7 @@ class DolbyFragment : PreferenceFragment(), OnCheckedChangeListener {
     }
 
     private fun setProfile(profile: Int) {
-        DolbyCore.setProfile(profile)
+        DolbyCore.setProfile(activity!!, profile)
 
         for ((key, value) in PREF_DOLBY_MODES) {
             val preference = findPreference<SelectorWithWidgetPreference>(key)!!
