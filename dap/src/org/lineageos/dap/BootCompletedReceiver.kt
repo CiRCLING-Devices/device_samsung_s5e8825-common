@@ -32,7 +32,11 @@ class BootCompletedReceiver : BroadcastReceiver() {
         val migratedFlag = "MIGRATED_TO_PER_DEVICE_PREFS"
         if (!prefs.getBoolean(migratedFlag, false)) {
             // Enable Dolby for speaker by default on first boot after update
-            prefs.edit().putBoolean("enabled_speaker", true).putBoolean(migratedFlag, true).apply()
+            prefs.edit()
+                .putBoolean("enabled_speaker", true)
+                .putInt("profile_speaker", DolbyCore.PROFILE_AUTO)
+                .putBoolean(migratedFlag, true)
+                .apply()
         }
         // Restore per-device state for all known device types
         for (device in DolbyCore.OutputDevice.values()) {
