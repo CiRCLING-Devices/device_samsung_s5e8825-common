@@ -6,7 +6,9 @@ dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
 dalvik.vm.image-dex2oat-threads=4
 
 # Logs
+persist.log.tag.artd=S
 persist.log.tag.AnalyticsService=S
+persist.log.tag.ArtService=s
 persist.log.tag.b/223498680=S
 persist.log.tag.CompatibilityChangeReporter=S
 persist.log.tag.ContrastColorUtil=S
