@@ -13,6 +13,9 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mz_tee_driver.ko
 
 on init
+    # AFC permissions for fast charge
+    chown system radio /sys/class/sec/switch/afc_disable
+
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /storage/sdcard 0000 root root
     mkdir /storage/usb1 0000 root root
