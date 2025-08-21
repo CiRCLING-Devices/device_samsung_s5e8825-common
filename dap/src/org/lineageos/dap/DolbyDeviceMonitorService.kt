@@ -9,6 +9,7 @@ import android.os.IBinder
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.os.Build
 
 class DolbyDeviceMonitorService : Service() {
     private val TAG = "DolbyDeviceMonitorService"
@@ -63,7 +64,12 @@ class DolbyDeviceMonitorService : Service() {
             addAction("android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED")
             addAction("android.media.ACTION_AUDIO_BECOMING_NOISY")
         }
-        registerReceiver(deviceReceiver, filter)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(deviceReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+        } else {
+            @Suppress("DEPRECATION")
+            registerReceiver(deviceReceiver, filter)
+        }
         // Start polling fallback
         lastDevice = DolbyCore.getCurrentOutputDevice(this)
         handler.post(pollRunnable)
