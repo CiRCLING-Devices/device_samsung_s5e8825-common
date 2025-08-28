@@ -99,3 +99,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Touch HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.samsung
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.samsung
