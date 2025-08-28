@@ -82,3 +82,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Touch HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.samsung
