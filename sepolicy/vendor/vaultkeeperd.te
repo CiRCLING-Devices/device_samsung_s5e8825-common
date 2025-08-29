@@ -2,6 +2,8 @@
 allow vaultkeeperd spu_block_device:blk_file { ioctl open read write };
 allow vaultkeeperd hwservicemanager_prop:file { map getattr read open };
 
+hwbinder_use(vaultkeeperd)
+
 get_prop(vaultkeeperd, vendor_vaultkeeper_prop)
 
 init_daemon_domain(vaultkeeperd)
