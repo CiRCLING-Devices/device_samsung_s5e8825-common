@@ -128,6 +128,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack-service.samsung-mali
+
 # NFC
 PRODUCT_PACKAGES += \
     libnfc-nci \
