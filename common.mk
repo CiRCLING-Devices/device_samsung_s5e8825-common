@@ -145,6 +145,11 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.samsung
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.samsung \
+    android.hardware.usb.gadget-service.samsung
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
