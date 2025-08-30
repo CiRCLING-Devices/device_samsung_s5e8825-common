@@ -204,6 +204,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# RIL
+PRODUCT_PACKAGES += \
+    cbd \
+    secril_config_svc \
+    sehradiomanager
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
+
 # Samsung DAP
 PRODUCT_PACKAGES += \
     SamsungDAP-custom
