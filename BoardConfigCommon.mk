@@ -95,6 +95,9 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
+# Security
+VENDOR_SECURITY_PATCH := 2025-08-01
+
 # SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
