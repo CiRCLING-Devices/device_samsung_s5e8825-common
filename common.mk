@@ -67,10 +67,12 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
 
 PRODUCT_PACKAGES += \
-    libvpl
-
-PRODUCT_PACKAGES += \
+    libvpl \
     libshim_camera
+
+$(call soong_config_set,samsungCameraVars,extra_ids,60)
+$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+$(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -91,6 +93,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     $(COMMON_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+
+$(call soong_config_set,openmax,legacy_mfc,true)
+$(call soong_config_set,openmax,USE_CSC_FILTER,true)
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -210,6 +215,8 @@ PRODUCT_PACKAGES += \
     secril_config_svc \
     sehradiomanager
 
+$(call soong_config_set,cbd,protocol,sipc)
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
@@ -233,6 +240,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
     android.hardware.usb.gadget-service.samsung
+
+$(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
 
 # Vibrator
 PRODUCT_PACKAGES += \

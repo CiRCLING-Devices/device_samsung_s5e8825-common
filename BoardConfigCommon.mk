@@ -35,15 +35,6 @@ TARGET_2ND_CPU_VARIANT := generic
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
-# Camera
-$(call soong_config_set,samsungCameraVars,extra_ids,60)
-$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
-$(call soong_config_set,samsungCameraVars,usage_64bit,true)
-
-# Codec2
-$(call soong_config_set,openmax,legacy_mfc,true)
-$(call soong_config_set,openmax,USE_CSC_FILTER,true)
-
 # DTB
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/s5e8825.cfg
 
@@ -114,8 +105,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-$(call soong_config_set,cbd,protocol,sipc)
-
 # Security
 VENDOR_SECURITY_PATCH := 2025-08-01
 
@@ -123,9 +112,6 @@ VENDOR_SECURITY_PATCH := 2025-08-01
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
-
-# USB
-$(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
