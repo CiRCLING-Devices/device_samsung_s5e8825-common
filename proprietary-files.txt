@@ -127,3 +127,10 @@ vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|fc3522bd787fa48ab80
 vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|8645b1d3d2e944a38ec07ee8c69d9f7d817b3730
 vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|9b3b09c9bc2911b801d0de0caea13476a90f8776
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|611a9f8ca1a46b33471643e200e70ce28f963b75
+
+# WiFi
+vendor/etc/init/wifi.rc
+vendor/etc/init/wifi_slsi.rc
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/mx140.bin
+vendor/etc/wifi/mx140_t.bin
