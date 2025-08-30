@@ -101,6 +101,12 @@ $(call soong_config_set,openmax,USE_CSC_FILTER,true)
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@4.0-service \
+    android.hardware.graphics.mapper@4.0-impl \
+    android.hardware.composer.hwc3-service.slsi
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
