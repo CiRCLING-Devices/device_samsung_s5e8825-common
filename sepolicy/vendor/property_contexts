@@ -1,5 +1,8 @@
 # Camera
 persist.vendor.sys.camera.    u:object_r:vendor_camera_prop:s0
+vendor.hal.camera.            u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.        u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.             u:object_r:vendor_camera_prop:s0
 
 # HWC
 vendor.hwc.                   u:object_r:vendor_hwc_prop:s0
@@ -10,6 +13,7 @@ vendor.securehw.available     u:object_r:vendor_hermes_prop:s0
 # Radio
 ro.vendor.multisim.simslotcount u:object_r:vendor_radio_prop:s0
 ro.vendor.radio.default_network u:object_r:vendor_radio_prop:s0
+vendor.ril.product_code         u:object_r:vendor_radio_prop:s0
 
 # Vaultkeeper
 ro.vendor.factory_binary      u:object_r:vendor_vaultkeeper_prop:s0
