@@ -49,6 +49,10 @@ PRODUCT_COPY_FILES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -57,6 +61,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 450dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.s5e8825 \
+    android.hardware.health-service.s5e8825-recovery
 
 # Init
 PRODUCT_COPY_FILES += \
