@@ -12,11 +12,22 @@ from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
+from extract_utils.fixups_lib import (
+    lib_fixups_user_type,
+)
 
 module = ExtractUtilsModule(
     's5e8825-common',
     'samsung',
 )
+
+def lib_fixup_device_dep(lib: str, partition: str, *args, **kwargs):
+    return f'//device/samsung/s5e8825-common/shims/stub:{lib}'
+
+
+lib_fixups: lib_fixups_user_type = {
+    'libexynoscamera3': lib_fixup_device_dep,
+}  # fmt: skip
 
 blob_fixups: blob_fixups_user_type = {
    (

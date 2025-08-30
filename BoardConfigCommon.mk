@@ -35,6 +35,11 @@ TARGET_2ND_CPU_VARIANT := generic
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
+# Camera
+$(call soong_config_set,samsungCameraVars,extra_ids,60)
+$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+$(call soong_config_set,samsungCameraVars,usage_64bit,true)
+
 # Codec2
 $(call soong_config_set,openmax,legacy_mfc,true)
 $(call soong_config_set,openmax,USE_CSC_FILTER,true)

@@ -62,6 +62,16 @@ PRODUCT_COPY_FILES += \
     hardware/samsung_slsi/libbt/conf/bt_did.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_did.conf \
     hardware/samsung_slsi/libbt/conf/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-service.samsung
+
+PRODUCT_PACKAGES += \
+    libvpl
+
+PRODUCT_PACKAGES += \
+    libshim_camera
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor

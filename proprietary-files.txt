@@ -63,6 +63,24 @@ vendor/lib/soundfx/libswdap.so
 vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libspatializerparamstorage.so
 
+# Camera
+vendor/lib/libexynoscamera_plugin.so
+vendor/lib64/libexynoscamera_plugin.so
+
+# Camera - Dependencies
+vendor/lib/libSEF.quram.so
+vendor/lib/libexynoscamera_cnr_plugin.so
+vendor/lib/libswcnr.so
+vendor/lib64/libSEF.quram.so
+vendor/lib64/libc++_shared.so
+vendor/lib64/libexynoscamera_cnr_plugin.so
+vendor/lib64/libhwjsqz.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libswcnr.so
+vendor/lib64/libuniapi.so
+vendor/lib64/libuniplugin.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+
 # Codecs
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
