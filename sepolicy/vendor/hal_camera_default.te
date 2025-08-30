@@ -32,3 +32,6 @@ allow hal_camera_default app_efs_file:file r_file_perms;
 allow hal_camera_default dmabuf_heap_device:chr_file rw_file_perms;
 
 allow hal_camera_default vendor_bufcon_device:chr_file { open read write ioctl };
+
+allow hal_camera_default hal_vendor_epic_hwservice:hwservice_manager find;
+binder_call(hal_camera_default, hal_vendor_epic_service_default);

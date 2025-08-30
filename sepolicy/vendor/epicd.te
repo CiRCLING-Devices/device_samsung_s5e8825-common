@@ -1,0 +1,5 @@
+type sysfs_performance, fs_type, sysfs_type;
+
+allow epicd sysfs_performance:file { write open getattr };
+allow epicd sysfs_gpu:file { read write getattr open };
+allow epicd sysfs_gpu:dir search;
