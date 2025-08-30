@@ -19,6 +19,9 @@ $(call inherit-product, vendor/samsung/s5e8825-common/s5e8825-common-vendor.mk)
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Samsung SLSI Linaro
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
 # Private keys
 $(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
 
