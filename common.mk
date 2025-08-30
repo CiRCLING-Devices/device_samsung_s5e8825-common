@@ -101,6 +101,10 @@ $(call soong_config_set,openmax,USE_CSC_FILTER,true)
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

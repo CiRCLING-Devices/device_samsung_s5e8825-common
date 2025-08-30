@@ -86,6 +86,12 @@ vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
+# DRM Widevine
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/lib64/libwvhidl.so
+
 # Gatekeeper
 vendor/lib/hw/gatekeeper.s5e8825.so
 vendor/lib64/hw/gatekeeper.s5e8825.so
