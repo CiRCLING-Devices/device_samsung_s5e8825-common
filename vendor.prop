@@ -15,5 +15,8 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
+# Codec2
+debug.stagefright.c2inputsurface=-1
+
 # Power HAL
 vendor.powerhal.disp.idle_support=false

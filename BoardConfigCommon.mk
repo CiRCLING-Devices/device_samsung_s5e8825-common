@@ -35,6 +35,10 @@ TARGET_2ND_CPU_VARIANT := generic
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
+# Codec2
+$(call soong_config_set,openmax,legacy_mfc,true)
+$(call soong_config_set,openmax,USE_CSC_FILTER,true)
+
 # DTB
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/s5e8825.cfg
 
