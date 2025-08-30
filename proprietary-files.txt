@@ -85,3 +85,7 @@ vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
+
+# Gatekeeper
+vendor/lib/hw/gatekeeper.s5e8825.so
+vendor/lib64/hw/gatekeeper.s5e8825.so

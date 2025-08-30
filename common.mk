@@ -100,6 +100,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl:64 \
+    android.hardware.gatekeeper@1.0-service
+
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 450dpi
@@ -195,6 +200,10 @@ PRODUCT_COPY_FILES += \
 # Samsung DAP
 PRODUCT_PACKAGES += \
     SamsungDAP-custom
+
+# Samsung Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
