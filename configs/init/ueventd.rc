@@ -287,7 +287,7 @@
 # PROCA dev config
 /dev/proca_config         0440   system     system
 
-# grip sensor
+# Grip sensor
 /dev/input/event*				0660	system	input
 /sys/devices/virtual/input/input*   enable      0660	system	input
 /sys/devices/virtual/input/input*   poll_delay  0660	system	input

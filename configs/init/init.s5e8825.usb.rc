@@ -3,8 +3,6 @@ on init
     mkdir /config/usb_gadget/g1/strings/0x409 0770
     mkdir /config/usb_gadget/g1/configs/b.1
     mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770
-#    mkdir /config/usb_gadget/g1/functions/mtp.gs0
-#    mkdir /config/usb_gadget/g1/functions/ptp.gs1
     mkdir /config/usb_gadget/g1/functions/ffs.mtp
     mkdir /config/usb_gadget/g1/functions/ffs.ptp
     mkdir /config/usb_gadget/g1/functions/conn_gadget.gs9
@@ -14,7 +12,8 @@ on init
     mkdir /config/usb_gadget/g1/functions/dm.gs7
     mkdir /config/usb_gadget/g1/functions/uts.gs8
     mkdir /config/usb_gadget/g1/functions/ffs.adb
-    # samsung device manage function
+
+    # Samsung device manage function
     mkdir /config/usb_gadget/g1/functions/ss_mon.mtp
     mkdir /config/usb_gadget/g1/functions/ss_mon.ptp
     mkdir /config/usb_gadget/g1/functions/ss_mon.etc
@@ -48,7 +47,7 @@ on boot
     chown system system /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file
     chmod 0660 /config/usb_gadget/g1/functions/mass_storage.0/lun.0/file
 
-# For factory binary
+# Factory binary
 on boot && property:ro.factory.factory_binary=factory
     chmod 0777 /config/usb_gadget/g1
 
@@ -554,4 +553,3 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=sec_charging,adb
     symlink /config/usb_gadget/g1/functions/ss_mon.mtp /config/usb_gadget/g1/configs/b.1/f5
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
-
