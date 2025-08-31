@@ -109,6 +109,7 @@ module = ExtractUtilsModule(
     'samsung',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
 )
 
 if __name__ == '__main__':
