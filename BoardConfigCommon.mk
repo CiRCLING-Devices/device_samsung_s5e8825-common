@@ -158,6 +158,7 @@ BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := erd8825
 TARGET_BOOTLOADER_BOARD_NAME := s5e8825
 TARGET_SOC := s5e8825
+include hardware/samsung_slsi-linaro/config/BoardConfig8825.mk
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
