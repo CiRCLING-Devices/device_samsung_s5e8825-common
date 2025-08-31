@@ -57,6 +57,7 @@ debug.sf.enable_transaction_tracing=false
 debug.sf.latch_unsignaled=1
 debug.sf.predict_hwc_composition_strategy=0
 ro.hardware.egl=mali
+ro.hardware.vulkan=mali
 
 # FRP
 ro.frp.pst=
