@@ -30,7 +30,25 @@ lib_fixups: lib_fixups_user_type = {
 }  # fmt: skip
 
 blob_fixups: blob_fixups_user_type = {
-   (
+    'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so': blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
+            'android.hardware.security.keymint-V4-ndk.so')
+        .replace_needed('android.hardware.security.keymint-V1-ndk_platform',
+            'android.hardware.security.keymint-V4-ndk')
+        .replace_needed('android.hardware.security.keymint-V1-ndk',
+            'android.hardware.security.keymint-V4-ndk')
+        .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so',
+            'android.hardware.security.secureclock-V1-ndk.so')
+        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so',
+             'android.hardware.security.sharedsecret-V1-ndk.so')
+        .add_needed('android.hardware.security.rkp-V3-ndk.so')
+        .replace_needed('libcrypto.so', 'libcrypto-tm.so')
+        .replace_needed('libssl.so', 'libssl-tm.so')
+        .add_needed('libshim_crypto.so'),
+    'vendor/etc/init/android.hardware.security.keymint-service.samsung.rc': blob_fixup()
+        .regex_replace('android\\.hardware\\.security\\.keymint-service\n',
+            'android.hardware.security.keymint-service.samsung\n'),
+    (
         'vendor/lib/libaudioparamupdate.so',
         'vendor/lib/libaboxpcmdump.so',
         'vendor/lib/libaudioproxy2.so',

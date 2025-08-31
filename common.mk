@@ -164,6 +164,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     toolbox.vendor_ramdisk
 
+# Keymint
+PRODUCT_PACKAGES += \
+    libshim_crypto
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
