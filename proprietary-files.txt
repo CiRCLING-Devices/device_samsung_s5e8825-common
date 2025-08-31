@@ -171,6 +171,10 @@ vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|8645b1d3d2e944a38ec07e
 vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|9b3b09c9bc2911b801d0de0caea13476a90f8776
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|611a9f8ca1a46b33471643e200e70ce28f963b75
 
+# SecNative
+vendor/lib/libsecnativefeature.so
+vendor/lib64/libsecnativefeature.so
+
 # Sensors
 vendor/etc/init/init.sensorhub.rc
 vendor/etc/sensors/hals.conf
