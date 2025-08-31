@@ -109,6 +109,20 @@ vendor/lib64/libsynaFpSensorTestNwd.so;DISABLE_CHECKELF
 vendor/lib/hw/gatekeeper.s5e8825.so
 vendor/lib64/hw/gatekeeper.s5e8825.so
 
+# GPS
+vendor/bin/hw/gps.sh
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
+vendor/etc/gnss/ca.pem
+vendor/etc/gnss/gps.cfg
+vendor/etc/init/init.gps.rc
+vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
+vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
+vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so;FIX_SONAME
+vendor/lib64/libwrappergps.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
+
 # RIL
 vendor/bin/cass
 vendor/bin/secril_config_svc
