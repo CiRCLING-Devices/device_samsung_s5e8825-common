@@ -16,6 +16,14 @@ from extract_utils.fixups_lib import (
     lib_fixups_user_type,
 )
 
+namespace_imports = [
+    'device/samsung/s5e8825-common',
+    'hardware/samsung',
+    'hardware/samsung_slsi-linaro/exynos',
+    'hardware/samsung_slsi-linaro/graphics',
+    'hardware/samsung_slsi-linaro/interfaces',
+]
+
 def lib_fixup_device_dep(lib: str, partition: str, *args, **kwargs):
     return f'//device/samsung/s5e8825-common/shims/stub:{lib}'
 
@@ -88,6 +96,7 @@ blob_fixups: blob_fixups_user_type = {
 module = ExtractUtilsModule(
     's5e8825-common',
     'samsung',
+    namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
 )
 
