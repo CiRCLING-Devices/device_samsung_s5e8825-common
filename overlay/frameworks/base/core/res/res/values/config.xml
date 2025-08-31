@@ -124,6 +124,11 @@
     <integer name="config_autoBrightnessBrighteningLightDebounce">500</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">3000</integer>
 
+    <!-- Control whether Night display is available. This should only be enabled on devices
+         that have a HWC implementation that can apply the matrix passed to setColorTransform
+         without impacting power, performance, and app compatibility (e.g. protected content). -->
+    <bool name="config_nightDisplayAvailable">true</bool>
+
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
 
