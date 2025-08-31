@@ -123,6 +123,12 @@ vendor/lib64/libwrappergps.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
+# Graphics - from a54x - A546BXXUCDYDB
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so,vendor/lib/libOpenCL.so.1,vendor/lib/libOpenCL.so.1.1|c10109aacafe9f8eca4745c51fd06e604bc25f89
+vendor/lib/hw/vulkan.mali.so|f9ccc82ce4a822a4f294c2f03280de9b7026ca00
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|c4e937bddd63787f391ec52ea453c9c8b4a41834
+vendor/lib64/hw/vulkan.mali.so|8d5c6634ec83b9d1940eb8327e2d84a2c3c6da56
+
 # RIL
 vendor/bin/cass
 vendor/bin/secril_config_svc
