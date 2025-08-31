@@ -95,6 +95,10 @@ ro.radio.noril=no
 vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 
+# Samsung specific
+ro.product_ship=true
+ro.vendor.cscsupported=1
+
 # SurfaceFlinger
 debug.sf.enable_gl_backpressure=false
 ro.surface_flinger.support_kernel_idle_timer=true
