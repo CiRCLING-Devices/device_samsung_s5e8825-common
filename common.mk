@@ -243,7 +243,12 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(COMMON_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
+    hardware/samsung_slsi/libbt
 
 # Touch HAL
 PRODUCT_PACKAGES += \
