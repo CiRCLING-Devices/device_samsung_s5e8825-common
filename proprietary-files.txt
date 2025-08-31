@@ -181,6 +181,15 @@ vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.inputvirtual.so
 vendor/lib64/sensors.sensorhub.so
 
+# TEEgris
+vendor/bin/tzdaemon
+vendor/bin/tzts_daemon
+vendor/etc/init/teegris_v4.rc
+vendor/lib/libteecl.so
+vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libteecl.so
+vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
+
 # WiFi
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_slsi.rc
