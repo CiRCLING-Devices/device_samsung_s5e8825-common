@@ -133,6 +133,12 @@ vendor/lib64/hw/vulkan.mali.so|8d5c6634ec83b9d1940eb8327e2d84a2c3c6da56
 vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+# PROCA
+vendor/app/mcRegistry/00060308060501020000000000000000.tabin
+vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin
+vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
+vendor/etc/init/pa_daemon_teegris.rc
+
 # RIL
 vendor/bin/cass
 vendor/bin/secril_config_svc
