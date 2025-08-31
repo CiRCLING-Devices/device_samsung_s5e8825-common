@@ -183,6 +183,13 @@ on init
     # Clear sched_util_clamp_min_rt_default
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
+    # Permissions for Power HAL
+    chmod 0664 /dev/cluster0_freq_min
+    chmod 0664 /dev/cluster0_freq_max
+    chmod 0664 /dev/cluster1_freq_min
+    chmod 0664 /dev/cluster1_freq_max
+    chmod 0664 /dev/cpu_dma_latency
+
     start watchdogd
 
     setprop ro.boot.hardware.revision ${ro.revision}
