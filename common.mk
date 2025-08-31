@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+COMMON_PATH := device/samsung/s5e8825-common
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/s5e8825-common/s5e8825-common-vendor.mk)
 
