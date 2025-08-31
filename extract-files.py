@@ -102,6 +102,8 @@ blob_fixups: blob_fixups_user_type = {
             '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 03 00 80 D2'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
+    'vendor/lib64/libssl-tm.so': blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-tm.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
