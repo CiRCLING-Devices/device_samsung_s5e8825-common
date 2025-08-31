@@ -16,20 +16,6 @@ on init
     # AFC permissions for fast charge
     chown system radio /sys/class/sec/switch/afc_disable
 
-    # See storage config details at http://source.android.com/tech/storage/
-    mkdir /storage/sdcard 0000 root root
-    mkdir /storage/usb1 0000 root root
-    mkdir /storage/usb2 0000 root root
-    mkdir /mnt/media_rw/sdcard 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb1 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb2 0700 media_rw media_rw
-
-    export SECONDARY_STORAGE /storage/sdcard:/storage/usb1:/storage/usb2
-
-    # Support legacy paths
-    symlink /storage/sdcard /mnt/ext_sd
-    symlink /data/app /factory
-
     symlink /dev/block/by-name/steady /dev/block/steady
     symlink /dev/block/by-name/persistent /dev/block/persistent
     symlink /dev/block/by-name/param /dev/block/param
@@ -443,8 +429,6 @@ on boot
     chmod 0755 /sys/kernel/debug
     chown system system /sys/kernel/debug
 
-    setprop ro.radio.noril no
-
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
     write /sys/kernel/debug/tracing/tracing_on 0
@@ -618,8 +602,6 @@ on fs
     wait /dev/block/by-name/spu
     mount ext4 /dev/block/by-name/spu /spu nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
 
-    setprop ro.crypto.fuse_sdcard true
-
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
     restorecon_recursive /mnt/vendor/persist
@@ -631,13 +613,6 @@ on fs
 
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
-
-    # Enable rmnet data and aggregation
-    setprop persist.rmnet.mux enabled
-    setprop persist.rmnet.data.enable true
-    setprop persist.data.wda.enable true
-    setprop persist.data.df.agg.dl_pkt 10
-    setprop persist.data.df.agg.dl_size 4096
 
     # CBD
     setprop vendor.cbd.partition modem
@@ -786,23 +761,6 @@ on fs
     # ECD Firmware
     write /proc/ecd/load_firmware 1
 
-service fuse_sdcard /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard /storage/sdcard
-    class late_start
-    disabled
-
-service fuse_usb1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb1 /storage/usb1
-    class late_start
-    disabled
-
-service fuse_usb2 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb2 /storage/usb2
-    class late_start
-    disabled
-
-service abox_log /vendor/bin/abox_log sec-audio-debug /data/vendor/log/abox
-    class late_start
-    user audioserver
-    group system
-
 service watchdogd /system/bin/watchdogd 10 20
     class core
     oneshot
@@ -819,46 +777,6 @@ service watchdogd /system/bin/watchdogd 10 20
 
 on property:ro.boot.slot_suffix=*
     setprop vendor.cbd.partition modem${ro.boot.slot_suffix}
-
-service test_copy /vendor/etc/wifi/temp.sh
-    user root
-    oneshot
-
-# Enable kgdb on the serial console on userdebug and eng builds
-on property:ro.debuggable=1
-    write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
-    write /sys/module/fiq_debugger/parameters/kgdb_enable 1
-
-service dhcpcd_wlan0 /vendor/bin/dhcpcd -aABDKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_wlan0 /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
-service dhcpcd_p2p /vendor/bin/dhcpcd -aABKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_p2p /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
-# SPE-1748: PANU DHCP Client not launched
-service dhcpcd_bt-pan /vendor/bin/dhcpcd -ABKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_bt-pan /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
 
 # IMS WiFi Calling
 service charonservice /system/vendor/bin/charon
@@ -935,66 +853,3 @@ on post-fs
 on boot
     write /proc/sys/vm/swappiness 130
     write /sys/module/zram/parameters/zram_balance_ratio 30
-
-# Pageboostd
-on property:sys.boot_completed=1
-    start pageboostd
-
-service pageboostd /system/bin/pageboostd
-    class main
-    user system
-    group system mount radio net_bt sdcard_rw shell media media_rw
-    socket pageboostd seqpacket 0660 system system
-    disabled
-
-# Some priv-apps of DSH bind mount to TMB priv-apps
-on post-fs-data && property:ro.csc.sales_code=TMB
-    umount /system/carrier
-    mkdir /mnt/temp
-    mount none /system/carrier/DSH /mnt/temp bind
-    mount none /system/carrier/TMB /system/carrier bind
-    mount none /mnt/temp/priv-app/CDM /system/carrier/priv-app/CDM bind
-    mount none /mnt/temp/priv-app/MCM /system/carrier/priv-app/MCM bind
-    mount none /mnt/temp/priv-app/MInstaller /system/carrier/priv-app/MInstaller bind
-    mount none /mnt/temp/priv-app/SprintAndroidExtension2DSH /system/carrier/priv-app/SprintAndroidExtension2DSH bind
-    mount none /mnt/temp/priv-app/SMF /system/carrier/priv-app/SMF bind
-    umount /mnt/temp
-    rmdir /mnt/temp
-
-# Some priv-apps of DSH bind mount to ASR priv-apps
-on post-fs-data && property:ro.csc.sales_code=ASR
-    umount /system/carrier
-    mkdir /mnt/temp
-    mount none /system/carrier/DSH /mnt/temp bind
-    mount none /system/carrier/ASR /system/carrier bind
-    mount none /mnt/temp/priv-app/CDM /system/carrier/priv-app/CDM bind
-    mount none /mnt/temp/priv-app/MCM /system/carrier/priv-app/MCM bind
-    mount none /mnt/temp/priv-app/MInstaller /system/carrier/priv-app/MInstaller bind
-    mount none /mnt/temp/priv-app/SprintAndroidExtension2DSH /system/carrier/priv-app/SprintAndroidExtension2DSH bind
-    mount none /mnt/temp/priv-app/SMF /system/carrier/priv-app/SMF bind
-    umount /mnt/temp
-    rmdir /mnt/temp
-
-# Some priv-apps of DSH bind mount to TMK priv-apps
-on post-fs-data && property:ro.csc.sales_code=TMK
-    umount /system/carrier
-    mkdir /mnt/temp
-    mount none /system/carrier/DSH /mnt/temp bind
-    mount none /system/carrier/TMK /system/carrier bind
-    mount none /mnt/temp/priv-app/CDM /system/carrier/priv-app/CDM bind
-    mount none /mnt/temp/priv-app/MCM /system/carrier/priv-app/MCM bind
-    mount none /mnt/temp/priv-app/MInstaller /system/carrier/priv-app/MInstaller bind
-    mount none /mnt/temp/priv-app/SprintAndroidExtension2DSH /system/carrier/priv-app/SprintAndroidExtension2DSH bind
-    mount none /mnt/temp/priv-app/SMF /system/carrier/priv-app/SMF bind
-    umount /mnt/temp
-    rmdir /mnt/temp
-
-# Some priv-apps of DSH bind mount to DSA priv-apps
-on post-fs-data && property:ro.csc.sales_code=DSA
-    umount /system/carrier
-    mkdir /mnt/temp
-    mount none /system/carrier/DSH /mnt/temp bind
-    mount none /system/carrier/DSA /system/carrier bind
-    mount none /mnt/temp/priv-app/VisualVoicemailDsh_Stub /system/carrier/priv-app/VisualVoicemailDsh_Stub bind
-    umount /mnt/temp
-    rmdir /mnt/temp
