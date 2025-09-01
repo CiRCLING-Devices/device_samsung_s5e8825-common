@@ -567,8 +567,6 @@ on boot
 	  chown system radio /sys/class/sensors/grip_sensor_sub/noti_enable
 
     # Permissions for Fingerprint Sensor
-    chmod 0660 /dev/goodix_fp
-    chown system system /dev/goodix_fp
     chown system radio /sys/class/fingerprint/fingerprint/type_check
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
