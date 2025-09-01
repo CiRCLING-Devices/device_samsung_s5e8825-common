@@ -10,7 +10,7 @@ on early-boot
     write /config/usb_gadget/g1/os_desc/b_vendor_code 0x1
     write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
 
-    # ffs function
+    # FFS function
     mkdir /config/usb_gadget/g1/functions/ffs.adb 0770 shell shell
     mkdir /config/usb_gadget/g1/functions/ffs.mtp
     mkdir /config/usb_gadget/g1/functions/ffs.ptp
@@ -25,13 +25,13 @@ on early-boot
     setprop sys.usb.mtp.batchcancel true
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
 
-    # mtp function
+    # MTP function
     mkdir /config/usb_gadget/g1/functions/mtp.gs0
 
-    # ptp function
+    # PTP function
     mkdir /config/usb_gadget/g1/functions/ptp.gs1
 
-    # accessory function
+    # Accessory function
     mkdir /config/usb_gadget/g1/functions/accessory.gs2
 
     # audio_source function
@@ -48,24 +48,24 @@ on early-boot
     write /config/usb_gadget/g1/functions/rndis.gs4/ifname rndis%d
     setprop vendor.usb.rndis.config rndis.gs4
 
-    # midi function
+    # MIDI function
     mkdir /config/usb_gadget/g1/functions/midi.gs5
 
-    # acm function
+    # ACM function
     mkdir /config/usb_gadget/g1/functions/acm.gs6
 
-    # dm function
+    # DM function
     mkdir /config/usb_gadget/g1/functions/dm.gs7
 
-    # uts function
+    # UTS function
     mkdir /config/usb_gadget/g1/functions/uts.gs8
 
-    # ncm function
+    # NCM function
     mkdir /config/usb_gadget/g1/functions/ncm.gs9
     write /config/usb_gadget/g1/functions/ncm.gs9/os_desc/interface.ncm/compatible_id WINNCM
     write /config/usb_gadget/g1/functions/ncm.gs9/ifname ncm%d
 
-    # chown file/folder permission
+    # Set permissions
     chown system system /config/usb_gadget/
     chown system system /config/usb_gadget/g1
     chown system system /config/usb_gadget/g1/UDC
@@ -144,6 +144,7 @@ on early-boot
 
 on boot
     write /config/usb_gadget/g1/bcdDevice 0x0414
+
     # Use USB Gadget HAL
     setprop sys.usb.configfs 2
 

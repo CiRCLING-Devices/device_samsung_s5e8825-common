@@ -3,6 +3,7 @@ on init
 
     setprop sys.usb.configfs 1
 
+    # Start Watchdogd
     start watchdogd
 
 on late-init

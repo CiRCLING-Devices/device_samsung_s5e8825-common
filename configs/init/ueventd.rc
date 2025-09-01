@@ -7,12 +7,8 @@
 /dev/video2               0660   system     camera
 /dev/video3               0660   system     camera
 /dev/video20              0660   system     system
-# media0 is used for GSC, DECON, etc
 /dev/media0               0660   system     camera
-# media1 is used for DECON Ext WB
 /dev/media1               0660   system     graphics
-# Various devices use the v4l-subdev interface
-# We declare all such nodes simultaneously here
 /dev/v4l-subdev0          0660   system     camera
 /dev/v4l-subdev1          0660   system     camera
 /dev/v4l-subdev2          0660   system     camera
@@ -33,7 +29,6 @@
 /dev/v4l-subdev17         0660   system     camera
 /dev/v4l-subdev18         0660   system     camera
 /dev/v4l-subdev19         0660   system     camera
-# v4l-subdev20 is used for DECON Ext WB
 /dev/v4l-subdev20         0660   system     graphics
 /dev/v4l-subdev21         0660   system     graphics
 /dev/v4l-subdev32         0660   system     graphics
@@ -59,7 +54,6 @@
 /dev/video27              0660   media      graphics
 /dev/video29              0660   media      graphics
 /dev/video30              0660   media      graphics
-# video31 is used for DECON Ext WB
 /dev/video31              0660   media      graphics
 
 # mscalers
