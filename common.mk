@@ -152,8 +152,10 @@ $(call soong_config_set,exynos_hwc,HWC_FORCE_CLIENT_VIDEO,true)
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.s5e8825 \
-    android.hardware.health-service.s5e8825-recovery
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery
+
+$(call soong_config_set,samsungHealthVars,enable_suspend,false)
 
 # Init
 PRODUCT_COPY_FILES += \
