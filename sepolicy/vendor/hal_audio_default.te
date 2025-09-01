@@ -9,3 +9,7 @@ get_prop(hal_audio_default, vendor_radio_prop);
 allow hal_audio_default sysfs_audio:file r_file_perms;
 
 allow hal_audio_default rild:unix_stream_socket connectto;
+
+add_service(hal_audio_default, samsung_audio_hal_service)
+
+type samsung_audio_hal_service, service_manager_type;
