@@ -14,6 +14,7 @@ vendor.securehw.available     u:object_r:vendor_hermes_prop:s0
 ro.vendor.multisim.simslotcount u:object_r:vendor_radio_prop:s0
 ro.vendor.radio.default_network u:object_r:vendor_radio_prop:s0
 vendor.ril.product_code         u:object_r:vendor_radio_prop:s0
+vendor.ril.supportNrModefromCp  u:object_r:vendor_radio_prop:s0
 
 # Vaultkeeper
 ro.vendor.factory_binary      u:object_r:vendor_vaultkeeper_prop:s0
