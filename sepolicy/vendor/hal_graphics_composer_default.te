@@ -19,3 +19,7 @@ allow hal_graphics_composer_default sysfs_chipid:file r_file_perms;
 get_prop(hal_graphics_composer_default, vendor_camera_prop);
 
 allow hal_graphics_composer_default sysfs_backlight_writable:file rw_file_perms;
+allow hal_graphics_composer_default epicd_socket:sock_file { write setattr };
+
+allow hal_graphics_composer_default epicd_socket:unix_dgram_socket sendto;
+allow hal_graphics_composer_default epicd_socket:unix_stream_socket write;

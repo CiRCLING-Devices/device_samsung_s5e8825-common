@@ -78,8 +78,12 @@
 /sys/devices/virtual/camera/rear/ssrm_camera_info             u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
 
+# EPIC
+/dev/exynos-migov                                             u:object_r:migov_device:s0
+/sys/kernel/ems/emstune/aio_tuner                             u:object_r:ems_file:s0
+
 # Fingerprint
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service.s5e8825  u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.s5e8825  u:object_r:hal_fingerprint_default_exec:s0
 /dev/goodix_fp                                                u:object_r:fingerprint_device:s0
 
 # Media

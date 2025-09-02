@@ -28,6 +28,8 @@ type sysfs_decon, sysfs_type, r_fs_type, fs_type;
 type sysfs_decon_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_net_mtu_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
+type ems_file, fs_type, sysfs_type;
+type migov_file, fs_type, sysfs_type;
 
 # Weaver firmware
 type secnvm_vendor_etc_file, file_type, vendor_file_type;
