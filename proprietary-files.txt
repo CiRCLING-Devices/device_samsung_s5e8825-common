@@ -104,8 +104,6 @@ vendor/lib64/libexynos_migov.so
 vendor/lib64/libgmc.so
 
 # Fingerprint
-vendor/etc/init/fingerprint_common.rc
-vendor/etc/init/init.fingerprint.rc
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libgf_in_system_lib.so
 vendor/lib64/libqfp_sensortest.so
@@ -153,7 +151,6 @@ vendor/bin/cass
 vendor/bin/secril_config_svc
 vendor/etc/init/cass.rc
 vendor/etc/init/init.baseband.rc
-vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_chn.bin
 vendor/etc/plmn_delta_hktw.bin
