@@ -26,4 +26,7 @@
 
     <!-- When true enable color temperature setting. -->
     <bool name="config_enableColorTemperature">true</bool>
+
+    <!-- Whether to handle slot change events -->
+    <bool name="config_handle_sim_slot_change">true</bool>
 </resources>
