@@ -1,9 +1,6 @@
 on post-fs-data
     mkdir /data/vendor/secradio 0770 radio radio
 
-on property:vts.native_server.on=*
-    setprop vendor.vts.native_server.on ${vts.native_server.on}
-
 service network_config /vendor/bin/secril_config_svc NetworkConfig
     user radio
     group radio
