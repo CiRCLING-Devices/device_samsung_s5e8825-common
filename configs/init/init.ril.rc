@@ -1,12 +1,3 @@
-# Copyright (C) 2012 The Android Open Source Project
-#
-# IMPORTANT: Do not create world writable files or directories.
-# This is a common source of Android security bugs.
-#
-
-# service can not be overwritten except SPRINT
-# Thus, rilcarrier is imported before common rc, like init.rilchip.rc
-
 on post-fs-data
     mkdir /data/vendor/secradio 0770 radio radio
 
