@@ -93,9 +93,15 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/libwvhidl.so
 
 # EPIC
+vendor/bin/epic
+vendor/etc/ems.json
+vendor/etc/ems_parameter.json
 vendor/etc/epic.json
 vendor/lib/libepic_helper.so
+vendor/lib64/libems_service.so
 vendor/lib64/libepic_helper.so
+vendor/lib64/libexynos_migov.so
+vendor/lib64/libgmc.so
 
 # Fingerprint
 vendor/etc/init/fingerprint_common.rc
