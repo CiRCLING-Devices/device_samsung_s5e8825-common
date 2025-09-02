@@ -1,1 +1,2 @@
 allow system_server self:capability sys_module;
+allow system_server sysfs_performance:file r_file_perms;
