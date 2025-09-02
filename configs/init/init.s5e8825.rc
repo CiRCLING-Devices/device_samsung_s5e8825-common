@@ -483,19 +483,6 @@ on boot
     chown system system /dev/grip_sensor
     chown system system /dev/grip_sensor_sub
 
-    # Permissions for Fingerprint Sensor
-    chown system radio /sys/class/fingerprint/fingerprint/type_check
-    chown system radio /sys/class/fingerprint/fingerprint/name
-    chown system radio /sys/class/fingerprint/fingerprint/vendor
-    chown system radio /sys/class/fingerprint/fingerprint/adm
-    chown system radio /sys/class/fingerprint/fingerprint/bfs_values
-    chown system radio /sys/class/fingerprint/fingerprint/position
-    chown system radio /sys/class/fingerprint/fingerprint/rb
-    mkdir /data/vendor/biometrics 0770 system system
-    mkdir /data/vendor/fpSnrTest 0770 system system
-    mkdir /efs/biometrics 0770 system system
-    mkdir /efs/biometrics/meta 0770 system system
-
     # Mesh
     chown system system /sys/class/sec/sec_kq_mesh/cache_test
     chmod 0660 /sys/class/sec/sec_kq_mesh/cache_test

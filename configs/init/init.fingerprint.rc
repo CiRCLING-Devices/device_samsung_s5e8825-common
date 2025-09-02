@@ -1,11 +1,5 @@
 on boot
-# Fingerprint sensor
-    chmod 0660 /dev/esfp0
-    chown system system /dev/esfp0
-
-    chmod 0660 /dev/goodix_fp
-    chown system system /dev/goodix_fp
-
+    # Permissions for fingerprint sensor
     chmod 0660 /dev/qbt2000_fd
     chmod 0660 /dev/qbt2000_ipc
     chmod 0660 /dev/qbtspi
