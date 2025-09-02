@@ -80,7 +80,6 @@
 
 # EPIC
 /dev/exynos-migov                                             u:object_r:migov_device:s0
-/sys/kernel/ems/emstune/aio_tuner                             u:object_r:ems_file:s0
 
 # Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.s5e8825  u:object_r:hal_fingerprint_default_exec:s0
