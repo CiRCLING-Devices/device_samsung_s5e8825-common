@@ -27,13 +27,25 @@ static const dalvik_heap_info_t dalvik_heap_info_6144 = {
     .heaptargetutilization = "0.5",
 };
 
+static const dalvik_heap_info_t dalvik_heap_info_4096 = {
+    .heapstartsize = "8m",
+    .heapgrowthlimit = "256m",
+    .heapsize = "512m",
+    .heapminfree = "8m",
+    .heapmaxfree = "16m",
+    .heaptargetutilization = "0.6",
+};
+
 void set_dalvik_heap() {
     struct sysinfo sys;
     const dalvik_heap_info_t *dhi;
 
     sysinfo(&sys);
 
-    dhi = &dalvik_heap_info_6144;
+    if (sys.totalram > GB(5))
+        dhi = &dalvik_heap_info_6144;
+    else
+        dhi = &dalvik_heap_info_4096;
 
     property_override(HEAPSTARTSIZE_PROP, dhi->heapstartsize);
     property_override(HEAPGROWTHLIMIT_PROP, dhi->heapgrowthlimit);
