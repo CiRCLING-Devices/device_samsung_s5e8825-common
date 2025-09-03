@@ -42,8 +42,8 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
@@ -69,9 +69,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung
-
-PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-service.samsung \
     libvpl \
     libshim_camera
 
@@ -80,8 +78,7 @@ $(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
 # Charger
-PRODUCT_PACKAGES += \
-    charger_res_images_vendor
+PRODUCT_PACKAGES += charger_res_images_vendor
 
 # Codec2
 PRODUCT_PACKAGES += \
@@ -103,8 +100,7 @@ $(call soong_config_set,openmax,legacy_mfc,true)
 $(call soong_config_set,openmax,USE_CSC_FILTER,true)
 
 # ConfigStore
-PRODUCT_PACKAGES += \
-    disable_configstore
+PRODUCT_PACKAGES += disable_configstore
 
 # Display
 PRODUCT_PACKAGES += \
@@ -116,8 +112,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+PRODUCT_PACKAGES += android.hardware.drm-service.clearkey
 
 # EPIC
 PRODUCT_PACKAGES += \
@@ -126,12 +121,10 @@ PRODUCT_PACKAGES += \
     libepicoperator
 
 # fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
+PRODUCT_PACKAGES += fastbootd
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.s5e8825
+PRODUCT_PACKAGES += android.hardware.biometrics.fingerprint-service.s5e8825
 
 ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
@@ -176,24 +169,20 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_ENABLE_UFFD_GC := true
 
 # Kernel Modules
-PRODUCT_PACKAGES += \
-    toolbox.vendor_ramdisk
+PRODUCT_PACKAGES += toolbox.vendor_ramdisk
 
 # Keymint
-PRODUCT_PACKAGES += \
-    libshim_crypto
+PRODUCT_PACKAGES += libshim_crypto
 
 # Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+PRODUCT_PACKAGES += vendor.lineage.health-service.default
 
 $(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
 $(call soong_config_set,lineage_health,fast_charge_value_none,1)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 
 # Memtrack
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.samsung-mali
+PRODUCT_PACKAGES += android.hardware.memtrack-service.samsung-mali
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -251,15 +240,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr
+PRODUCT_PACKAGES += android.hardware.power-service.pixel-libperfmgr
 
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Public Libraries
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -269,16 +255,13 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,cbd,protocol,sipc)
 
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
+PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
 # Samsung DAP
-PRODUCT_PACKAGES += \
-    SamsungDAP-custom
+PRODUCT_PACKAGES += SamsungDAP-custom
 
 # Samsung Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
+PRODUCT_PACKAGES += SamsungDoze
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -295,8 +278,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi/libbt
 
 # Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.samsung
+PRODUCT_PACKAGES += vendor.lineage.touch-service.samsung
 
 # Update
 AB_OTA_UPDATER := false
@@ -323,5 +305,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
 
 # Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.samsung
+PRODUCT_PACKAGES += android.hardware.vibrator-service.samsung
