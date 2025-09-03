@@ -124,12 +124,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += fastbootd
 
 # Fingerprint
-PRODUCT_PACKAGES += android.hardware.biometrics.fingerprint-service.s5e8825
-
-ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.s5e8825 \
     sensors.samsung
-endif
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
