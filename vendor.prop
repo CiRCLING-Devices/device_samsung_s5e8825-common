@@ -117,6 +117,7 @@ ro.soc.model=Exynos 1280
 # SurfaceFlinger
 debug.sf.enable_gl_backpressure=false
 ro.surface_flinger.support_kernel_idle_timer=true
+ro.surface_flinger.use_color_management=true
 
 # Wi-Fi
 wifi.direct.interface=p2p0
