@@ -7,29 +7,6 @@ vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml|e6ba4246996de00f7dffca081
 vendor/etc/SoundBoosterParam.txt|0e7cc535a91e2841f2402277c5513687323ea076
 vendor/etc/sec_audio_volume_curve.xml|e689487098c8317db2d0e593e8fb281e92860cb9
 vendor/etc/usb_audio_policy_configuration.xml|1123a3a29c1fd176d14417861dbf51ee893ef523
-vendor/lib/hw/audio.primary.s5e8535.so:vendor/lib/hw/audio.primary.s5e8825.so;FIX_SONAME|6fd4ce8a2000af815ee8e7546c5ba962a6499cd9|f64292807b7485231c046c3a11f38249be391f22
-vendor/lib/hw/audio.sec_primary.default.so|c514ba99737be0cc867ad5130a3fa4461df7d1ea
-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.s5e8825.so;MODULE=libaudioroute.s5e8825;FIX_SONAME|874f2a2dccba793d54d98e6c657a9c13d69f7a0c|1e871fd1f45999cf646b4df2bfcaa4dc2b6ff5fa
-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.s5e8825.so;MODULE=libtinyalsa.s5e8825;FIX_SONAME|dba6224936f1d4b6f0702b84145213e3cefaa569|e4fd90ed1ab40347d317bffd4aa08b1c45b5bad7
-vendor/lib/libSamsungPostProcessConvertor.so|959825954643774d55c6aa56950b156428e60f3c
-vendor/lib/lib_SamsungRec_07010.so|d362a1eecefb52f4508e13efdf96eda91286cb3e
-vendor/lib/lib_SoundAlive_SRC384_ver320.so|c169fb0d8f95ddc3e38a645a6953d4a2f7fc6208
-vendor/lib/lib_soundaliveresampler.so|8b6823513e40905a323b34bade63b7bcac34acc5
-vendor/lib/libaboxpcmdump.so|c30e1a103eaae4d65c4ed212d4ab9e9977143bc9|1f3129a66d722f7012b71aed77425d1d7b4288b6
-vendor/lib/libalsautils_sec.so|ce680e917c791f907ee1f9d3df547f06508cfec4
-vendor/lib/libaudio-ril.so|d4753c898091587b5e2246f4a77ed187377f796e
-vendor/lib/libaudioparamupdate.so|a1ee9c137d7e9d61c7477e6b015baefef9138e0e|38db2f09635b1ac016a939b33e2703ceb946767c
-vendor/lib/libaudioproxy2.so|56b388164b3f704a1c09c3ff7c17a0e9d644873f|7a32d5a205db936470f1a17ac2b38d20a82f16bf
-vendor/lib/libdatamod.so|2980638fae8fe4377adae7de77d6f6974b531cab
-vendor/lib/libfloatingfeature.so|50c760e0ec55c9544069933241ef4148f586d352
-vendor/lib/liblastaboxmsg.so|6456092aa1290b7315282f4a2f01b80cbe780810
-vendor/lib/librecordalive.so|530ce4db5a16fca8913066dd4abda4ffc840b111
-vendor/lib/libsecaudiocoreutils.so|f26587b27d5f0284cb5eae9f8bd0fef5a93a914f
-vendor/lib/libsecaudioinfo.so|800f4ca8e5b37fa065613c4de7f1af883ed8beb7
-vendor/lib/libsecaudiolevel.so|7db210b10af8d9ee930e3fb29d63c028aba81bfa
-vendor/lib/libsehbluetooth_audio_session_aidl.so|66600c8d9567bbd6719248c9abf4ed3ff0eeae19
-vendor/lib/libspeakercalibration.so|e27e7bcc58523cfbe48d89b69b4ae345c749ada6
-vendor/lib/vendor.samsung.hardware.bluetooth.audio-V1-ndk.so|4b002ad882b7a33c32af5667212155674f601512
 vendor/lib64/hw/audio.primary.s5e8535.so:vendor/lib64/hw/audio.primary.s5e8825.so;FIX_SONAME|a1f545044aada7e41872ba1a821ef04ae0387a51|12792b200dd8d5e2030c420e6e86905265da1e56
 vendor/lib64/hw/audio.sec_primary.default.so|d3d397754596849c71178cf3eaeee96a05a52d3b
 vendor/lib64/hw/libsecaudiohal_aidl.so|c3782f74ba5ca6d2bde708d17a986b65723b816f
@@ -57,11 +34,11 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V1-ndk.so|e860ba5f7fe9ddcfe
 
 # Audio - Dolby Atmos
 vendor/etc/dolby/dax-default.xml
-vendor/lib/soundfx/libswdap.so
-vendor/lib/libprofileparamstorage.so
-vendor/lib/libspatializerparamstorage.so
 vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libspatializerparamstorage.so
+
+# Audio - Dolby Atmos - from a55x - A556EXXS5AXI4
+vendor/lib64/soundfx/libswdap.so|f50929bb7b17babd5c7758f40f53d6651c252aa2|3df9488370c0ccf8facbd8d5ffdb8d7f6fccd90f
 
 # Audio - Firmware
 vendor/firmware/APBiBF_AUDIO_SLSI.bin
@@ -75,13 +52,9 @@ vendor/firmware/listenbackeffect.bin
 vendor/firmware/volumemonitor.bin
 
 # Camera
-vendor/lib/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin.so
 
 # Camera - Dependencies
-vendor/lib/libSEF.quram.so
-vendor/lib/libexynoscamera_cnr_plugin.so
-vendor/lib/libswcnr.so
 vendor/lib64/libSEF.quram.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libexynoscamera_cnr_plugin.so
@@ -108,7 +81,6 @@ vendor/bin/epic
 vendor/etc/ems.json
 vendor/etc/ems_parameter.json
 vendor/etc/epic.json
-vendor/lib/libepic_helper.so
 vendor/lib64/libems_service.so
 vendor/lib64/libepic_helper.so
 vendor/lib64/libexynos_migov.so
@@ -126,7 +98,6 @@ vendor/firmware/default_configuration.flm.cfg.bin
 vendor/firmware/secure_configuration.flm.cfg.bin
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.s5e8825.so
 vendor/lib64/hw/gatekeeper.s5e8825.so
 
 # GPS
@@ -144,8 +115,6 @@ vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
 # Graphics - from a54x - A546BXXUCDYDB
-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so,vendor/lib/libOpenCL.so.1,vendor/lib/libOpenCL.so.1.1|c10109aacafe9f8eca4745c51fd06e604bc25f89
-vendor/lib/hw/vulkan.mali.so|f9ccc82ce4a822a4f294c2f03280de9b7026ca00
 vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|c4e937bddd63787f391ec52ea453c9c8b4a41834
 vendor/lib64/hw/vulkan.mali.so|8d5c6634ec83b9d1940eb8327e2d84a2c3c6da56
 
@@ -186,8 +155,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|e9cdde9d05c5cce32f76bbb164437f43b3288157
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
 vendor/etc/mtu-conf.xml|5bac5f518c1573e774758d2133518cc227134099
-vendor/lib/libsecril-client.so|fd7cb317ad17fd6c5b94c69bc4eaef80631215f1
-vendor/lib/libsemnativecarrierfeature.so|efd42aa2111a3afabe7a00dc98d7464516c435f1
 vendor/lib64/libril_sem.so|d66b065f6deb695e3498fd31a21737c25adae2e1
 vendor/lib64/libsec-ril.so|f1319b486f942fd0525de9037424ba9d305d080b|01a3f85b22ea3aabc07551829bc9bfbd1b0d2f1c
 vendor/lib64/libsecril-client.so|bae84e05d1c19dc5b41bfe2326dbf2744b1e412c
@@ -200,15 +167,11 @@ vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|9b3b09c9bc2911b80
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|611a9f8ca1a46b33471643e200e70ce28f963b75
 
 # SecNative
-vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
 
 # Sensors
 vendor/etc/init/init.sensorhub.rc
 vendor/etc/sensors/hals.conf
-vendor/lib/sensors.grip.so
-vendor/lib/sensors.inputvirtual.so
-vendor/lib/sensors.sensorhub.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.inputvirtual.so
 vendor/lib64/sensors.sensorhub.so
@@ -217,8 +180,6 @@ vendor/lib64/sensors.sensorhub.so
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
 vendor/etc/init/teegris_v4.rc
-vendor/lib/libteecl.so
-vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libteecl.so
 vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
 

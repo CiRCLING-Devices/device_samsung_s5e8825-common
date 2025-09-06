@@ -54,9 +54,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libsensorlistener.so': blob_fixup()
         .add_needed('libshim_sensorndkbridge.so'),
     (
-        'vendor/lib/sensors.grip.so',
-        'vendor/lib/sensors.inputvirtual.so',
-        'vendor/lib/sensors.sensorhub.so',
         'vendor/lib64/sensors.grip.so',
         'vendor/lib64/sensors.inputvirtual.so',
         'vendor/lib64/sensors.sensorhub.so',
@@ -65,22 +62,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libutils-v32.so')
         .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
     (
-        'vendor/lib/libaudioparamupdate.so',
-        'vendor/lib/libaboxpcmdump.so',
-        'vendor/lib/libaudioproxy2.so',
         'vendor/lib64/libaudioparamupdate.so',
         'vendor/lib64/libaboxpcmdump.so',
         'vendor/lib64/libaudioproxy2.so',
     ): blob_fixup()
         .add_needed('libaudioroute.s5e8825.so')
         .add_needed('libtinyalsa.s5e8825.so'),
-    'vendor/lib/hw/audio.primary.s5e8825.so': blob_fixup()
-        .replace_needed('libaudioroute.so', 'libaudioroute.s5e8825.so')
-        .replace_needed('libtinyalsa.so', 'libtinyalsa.s5e8825.so')
-        .sig_replace('84 68 01 2C 0B D1 15 22 C1 F8',
-                    '84 68 01 2C 00 BF 15 22 C1 F8')
-        .sig_replace('B0 FA 80 F0 40 09 10 BD 00 BF',
-                    'B0 FA 80 F0 01 20 10 BD 00 BF'),
     'vendor/lib64/hw/audio.primary.s5e8825.so': blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute.s5e8825.so')
         .replace_needed('libtinyalsa.so', 'libtinyalsa.s5e8825.so')
@@ -95,9 +82,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
     'vendor/lib64/libssl-tm.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-tm.so'),
-    'vendor/lib/soundfx/libswdap.so': blob_fixup()
-        .sig_replace('30 46 88 47 07 46 30 68',
-                     '30 46 88 47 01 27 30 68'),
+    'vendor/lib64/soundfx/libswdap.so': blob_fixup()
+        .sig_replace('08 09 40 f9 00 01 3f d6',
+                    '20 00 80 52 1f 20 03 d5'),
     'vendor/lib64/libVendorSemTelephonyProps.so': blob_fixup()
         .binary_regex_replace(rb'persist\.ril\.supportNrModefromCp', b'vendor.ril.supportNrModefromCp\x00'),
     'vendor/lib64/libvkmanager_vendor.so': blob_fixup()
