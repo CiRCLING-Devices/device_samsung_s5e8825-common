@@ -2,7 +2,7 @@
 <audio_effects_conf version="2.0" xmlns="http://schemas.android.com/audio/audio_effects_conf/v2_0">
     <!-- List of effect libraries to load.
          Each library element must contain a "name" attribute and a "path" attribute giving the
-         name of a library .so file in /vendor/lib/soundfx on the target
+         name of a library .so file in /vendor/lib64/soundfx on the target
 
          If offloadable effects are present, the AOSP library libeffectproxy.so must be listed as
          well as one library for the SW implementation and one library for the DSP implementation:
