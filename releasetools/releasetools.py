@@ -45,6 +45,14 @@ def AddFirmwareImage(info, model, basename, dest, simple=False, offset=8):
       return size
     return 0
 
+def AddModelImage(info, model, basename, dest):
+    data = info.input_zip.read("RADIO/" + basename + ".img")
+    common.ZipWriteStr(info.output_zip, f"{basename}.img", data)
+    info.script.AppendExtra('ifelse(getprop("ro.boot.em.model") == "%s",' % (model))
+    info.script.Print("Patching {} image unconditionally...".format(basename.split('.')[0]));
+    info.script.AppendExtra('package_extract_file("%s.img", "%s");' % (basename, dest))
+    info.script.AppendExtra(',"");')
+
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
