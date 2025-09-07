@@ -74,7 +74,6 @@ BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/s5e8825.cfg
 
 # DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
 
 # Dynamic Partitions
 BOARD_SUPER_PARTITION_SIZE := 11744051200
