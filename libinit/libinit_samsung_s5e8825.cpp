@@ -16,6 +16,30 @@ static const variant_info_t unknown = {
     .build_desc = "unknown"
 };
 
+static const variant_info_t a25xdxx = {
+    .device = "a25x",
+    .model = "SM-A256E",
+    .name = "a25xdxx",
+    .build_fingerprint = "samsung/a25xdxx/essi:15/AP3A.240905.015.A2/A256EXXS8CYG3:user/release-keys",
+    .build_desc = "a25xdxx-user 15 AP3A.240905.015.A2 A256EXXS8CYG3 release-keys"
+};
+
+static const variant_info_t a25xxx = {
+    .device = "a25x",
+    .model = "SM-A256B",
+    .name = "a25xxx",
+    .build_fingerprint = "samsung/a25xxx/essi:15/AP3A.240905.015.A2/A256BXXS8CYG4:user/release-keys",
+    .build_desc = "a25xxx-user 15 AP3A.240905.015.A2 A256BXXS8CYG4 release-keys"
+};
+
+static const variant_info_t a25zhx = {
+    .device = "a25x",
+    .model = "SM-A2560",
+    .name = "a25zhx",
+    .build_fingerprint = "samsung/a25zhx/essi:15/AP3A.240905.015.A2/A2560ZHS7CYG4:user/release-keys",
+    .build_desc = "a25zhx-user 15 AP3A.240905.015.A2 A2560ZHS7CYG4 release-keys"
+};
+
 static const variant_info_t a53xdcm = {
     .device = "a53x",
     .model = "SC-53C",
@@ -57,6 +81,9 @@ static const variant_info_t a53xzc = {
 };
 
 static const std::vector<variant_info_t> variants = {
+    a25xdxx,
+    a25xxx,
+    a25zhx,
     a53xdcm,
     a53xksx,
     a53xnaxx,
