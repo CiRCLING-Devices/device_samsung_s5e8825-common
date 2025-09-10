@@ -5,9 +5,6 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor_dlkm/lib/modules input_booster_lkm.ko
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor_dlkm/lib/modules sec_debug_coredump.ko
 
-    # Property used by vintf for sku specific manifests
-    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
-
     # MZ
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor_dlkm/lib/modules mz_tee_driver.ko
 
