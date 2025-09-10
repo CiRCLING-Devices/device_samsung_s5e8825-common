@@ -692,7 +692,7 @@ service watchdogd /system/bin/watchdogd 10 20
 on property:ro.boot.slot_suffix=*
     setprop vendor.cbd.partition modem${ro.boot.slot_suffix}
 
-on property:ro.factory.factory_binary=factory
+on property:ro.vendor.factory_binary=factory
     # ASV-G Spec
     chmod 0440 /sys/kernel/asv-g/cpucl0_fused_volt
     chmod 0440 /sys/kernel/asv-g/cpucl0_grp_volt
