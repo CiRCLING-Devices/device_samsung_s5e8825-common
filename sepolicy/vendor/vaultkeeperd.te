@@ -8,4 +8,5 @@ get_prop(vaultkeeperd, vendor_vaultkeeper_prop)
 
 init_daemon_domain(vaultkeeperd)
 
-allow vaultkeeperd hal_vaultkeeper_server_hwservice:hwservice_manager find;
+allow vaultkeeperd hal_vaultkeeper_server_hwservice:hwservice_manager { add find };
+allow vaultkeeperd hidl_base_hwservice:hwservice_manager { add };

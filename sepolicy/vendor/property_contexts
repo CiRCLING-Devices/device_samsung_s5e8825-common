@@ -16,6 +16,9 @@ ro.vendor.radio.default_network u:object_r:vendor_radio_prop:s0
 vendor.ril.product_code         u:object_r:vendor_radio_prop:s0
 vendor.ril.supportNrModefromCp  u:object_r:vendor_radio_prop:s0
 
+# RIL
+persist.vendor.cbd.btl_size     u:object_r:vendor_radio_prop:s0
+
 # Vaultkeeper
 ro.vendor.factory_binary      u:object_r:vendor_vaultkeeper_prop:s0
 

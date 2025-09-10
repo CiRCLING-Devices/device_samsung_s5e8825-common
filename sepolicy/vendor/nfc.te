@@ -1,0 +1,2 @@
+dontaudit nfc system_data_file:dir { add_name create remove_name rename open unlink write };
+dontaudit nfc system_data_file:file { create rename open unlink write };

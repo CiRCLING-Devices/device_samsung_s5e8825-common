@@ -16,4 +16,4 @@ add_service(hal_audio_default, samsung_audio_hal_service)
 
 type samsung_audio_hal_service, service_manager_type;
 
-dontaudit hal_audio_default radio_prop:file read;
+dontaudit hal_audio_default radio_prop:file { getattr map open read };
