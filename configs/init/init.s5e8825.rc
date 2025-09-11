@@ -440,7 +440,6 @@ on boot
     chown audioserver system /sys/devices/platform/14e50000.abox/0.abox-debug/calliope_dram
     chown audioserver system /sys/devices/platform/14e50000.abox/0.abox-debug/calliope_log
     chown audioserver system /sys/devices/platform/14e50000.abox/0.abox-debug/calliope_slog
-    chown audioserver system /sys/kernel/debug/regmap/14e50000.abox/registers
     chown audioserver system /proc/abox/qos
     chown audioserver system /proc/abox/failsafe/online
     chown audioserver system /proc/abox/failsafe/reset
