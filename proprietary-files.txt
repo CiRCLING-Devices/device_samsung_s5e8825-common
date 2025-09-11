@@ -188,7 +188,6 @@ vendor/etc/btcon.json
 
 # WiFi
 vendor/etc/init/wifi_slsi.rc
-vendor/etc/wifi/indoorchannel.info
 vendor/etc/wifi/mx140.bin
 vendor/etc/wifi/mx140_t.bin
 
