@@ -163,6 +163,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsung.rc \
     $(COMMON_PATH)/configs/init/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.rc \
     $(COMMON_PATH)/configs/init/init.ril.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ril.rc \
+    $(COMMON_PATH)/configs/init/init.wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wifi.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_s5e8825)
