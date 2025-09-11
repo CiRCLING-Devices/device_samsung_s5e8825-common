@@ -14,6 +14,7 @@ persist.log.tag.CompatibilityChangeReporter=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.gralloc4=S
 persist.log.tag.GRALLOC=S
+persist.log.tag.HWUI=S
 persist.log.tag.IntervalStats=S
 persist.log.tag.KernelCpuUidActiveTimeReader=S
 persist.log.tag.NearbySharing=S
