@@ -144,7 +144,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 450dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-$(call soong_config_set,exynos_hwc,HWC_FORCE_CLIENT_VIDEO,true)
+$(call soong_config_set,exynos_hwc,force_client_video,true)
 
 # Health
 PRODUCT_PACKAGES += \
