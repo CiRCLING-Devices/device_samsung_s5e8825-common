@@ -84,8 +84,8 @@ static const variant_info_t m34xdxx = {
     .device = "m34x",
     .model = "SM-M346B1",
     .name = "m34xdxx",
-    .build_fingerprint = "samsung/m34xdxx/essi:15/AP3A.240905.015.A2/M346B1DXU7DYE1:user/release-keys",
-    .build_desc = "m34xdxx-user 15 AP3A.240905.015.A2 M346B1DXU7DYE1 release-keys"
+    .build_fingerprint = "samsung/m34xdxx/essi:15/AP3A.240905.015.A2/M346B1DXS8DYH1:user/release-keys",
+    .build_desc = "m34xdxx-user 15 AP3A.240905.015.A2 M346B1DXS8DYH1 release-keys"
 };
 
 static const variant_info_t m34xins = {
