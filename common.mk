@@ -216,7 +216,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.picture_in_picture.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.picture_in_picture.xml \
-    frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 PRODUCT_PACKAGES += \
@@ -245,7 +244,8 @@ PRODUCT_PACKAGES += \
     android.software.ipsec_tunnels.prebuilt.xml \
     android.software.sip.voip.prebuilt.xml \
     android.hardware.telephony.gsm.prebuilt.xml \
-    android.hardware.fingerprint.prebuilt.xml
+    android.hardware.fingerprint.prebuilt.xml \
+    android.software.vulkan.deqp.level-2022-03-01.prebuilt.xml
 
 # Power
 PRODUCT_PACKAGES += android.hardware.power-service.pixel-libperfmgr
