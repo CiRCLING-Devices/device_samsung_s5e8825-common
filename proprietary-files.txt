@@ -190,6 +190,7 @@ vendor/etc/btcon.json
 vendor/etc/init/wifi_slsi.rc
 vendor/etc/wifi/mx140.bin
 vendor/etc/wifi/mx140_t.bin
+vendor/etc/wifi/mx140_t_common.hcf
 
 # Vaultkeeper
 vendor/etc/init/vaultkeeper_common.rc
