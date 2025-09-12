@@ -474,6 +474,10 @@ on boot
     chown system system /dev/grip_sensor
     chown system system /dev/grip_sensor_sub
 
+    # Permission for GPU
+    chown mediacodec system /sys/kernel/gpu/gpu_mm_min_clock
+    chmod 0644 /sys/kernel/gpu/gpu_mm_min_clock
+
     # Mesh
     chown system system /sys/class/sec/sec_kq_mesh/cache_test
     chmod 0660 /sys/class/sec/sec_kq_mesh/cache_test
