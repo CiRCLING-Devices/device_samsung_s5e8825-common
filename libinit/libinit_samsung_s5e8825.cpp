@@ -8,14 +8,6 @@
 
 #include "vendor_init.h"
 
-static const variant_info_t unknown = {
-    .device = "unknown",
-    .model = "unknown",
-    .name = "unknown",
-    .build_fingerprint = "unknown",
-    .build_desc = "unknown"
-};
-
 static const variant_info_t a25xxx = {
     .device = "a25x",
     .model = "SM-A256B",
@@ -98,7 +90,6 @@ static const std::vector<variant_info_t> variants = {
     m34xdxx,
     m34xins,
     m34xnsxx,
-    unknown,
 };
 
 void vendor_load_properties() {
