@@ -75,7 +75,7 @@ def OTA_InstallEnd(info):
         info.script.AppendExtra('s5e8825.verify_no_downgrade("%s") == "0" &&' % version)
         info.script.AppendExtra('getprop("ro.boot.bootloader") != "%s",' % version)
         info.script.AppendExtra('assert(s5e8825.mark_header_bt("/dev/block/by-name/bota", 0, 0, 0));')
-        for image in 'fld.bin', 'harx.bin', 'keystorage.bin', 'ldfw.img', 'sboot.bin', 'tzar.img', 'tzsw.img', 'uh.bin', 'up_param.bin':
+        for image in 'fld.bin', 'harx.bin', 'keystorage.bin', 'ldfw.img', 'sboot.bin', 'tzar.img', 'tzsw.img', 'uh.bin':
           size = AddFirmwareImage(info, model, image, "/dev/block/by-name/bota", False, offset)
           if size > 0:
             numImages += 1
