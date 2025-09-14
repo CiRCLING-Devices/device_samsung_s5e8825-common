@@ -16,14 +16,6 @@ static const variant_info_t unknown = {
     .build_desc = "unknown"
 };
 
-static const variant_info_t a25xdxx = {
-    .device = "a25x",
-    .model = "SM-A256E",
-    .name = "a25xdxx",
-    .build_fingerprint = "samsung/a25xdxx/essi:15/AP3A.240905.015.A2/A256EXXS8CYG3:user/release-keys",
-    .build_desc = "a25xdxx-user 15 AP3A.240905.015.A2 A256EXXS8CYG3 release-keys"
-};
-
 static const variant_info_t a25xxx = {
     .device = "a25x",
     .model = "SM-A256B",
@@ -54,14 +46,6 @@ static const variant_info_t a53xksx = {
     .name = "a53xksx",
     .build_fingerprint = "samsung/a53xksx/essi:15/AP3A.240905.015.A2/A536NKSSCFYH1:user/release-keys",
     .build_desc = "a53xksx-user 15 AP3A.240905.015.A2 A536NKSSCFYH1 release-keys"
-};
-
-static const variant_info_t a53xnaxx = {
-    .device = "a53x",
-    .model = "SM-A536B",
-    .name = "a53xnaxx",
-    .build_fingerprint = "samsung/a53xnaxx/essi:15/AP3A.240905.015.A2/A536BXXSHFYH1:user/release-keys",
-    .build_desc = "a53xnaxx-user 15 AP3A.240905.015.A2 A536BXXSHFYH1 release-keys"
 };
 
 static const variant_info_t a53xnsxx = {
@@ -96,14 +80,6 @@ static const variant_info_t m34xins = {
     .build_desc = "m34xins-user 15 AP3A.240905.015.A2 E346BXXS8DYH1 release-keys"
 };
 
-static const variant_info_t m34xjxx = {
-    .device = "m34x",
-    .model = "SM-M346B2",
-    .name = "m34xjxx",
-    .build_fingerprint = "samsung/m34xjxx/essi:15/AP3A.240905.015.A2/M346B2XUS8DYH1:user/release-keys",
-    .build_desc = "m34xjxx-user 15 AP3A.240905.015.A2 M346B2XUS8DYH1 release-keys"
-};
-
 static const variant_info_t m34xnsxx = {
     .device = "m34x",
     .model = "SM-M346B",
@@ -113,17 +89,14 @@ static const variant_info_t m34xnsxx = {
 };
 
 static const std::vector<variant_info_t> variants = {
-    a25xdxx,
     a25xxx,
     a25zhx,
     a53xdcm,
     a53xksx,
-    a53xnaxx,
     a53xnsxx,
     a53xzc,
     m34xdxx,
     m34xins,
-    m34xjxx,
     m34xnsxx,
     unknown,
 };
