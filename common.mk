@@ -13,24 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/s5e8825-common
-
 # Inherit from generic products, most specific first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
-# Inherit the proprietary files
+# Inherit proprietary files
 $(call inherit-product, vendor/samsung/s5e8825-common/s5e8825-common-vendor.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Samsung SLSI Linaro
+# Inherit Samsung SLSI Linaro configuration
 $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
-# Private keys
-$(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
+COMMON_PATH := device/samsung/s5e8825-common
 
 # Audio
 PRODUCT_PACKAGES += \

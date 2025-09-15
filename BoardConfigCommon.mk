@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/s5e8825-common
-
-# Inherit the proprietary files
+# Inherit proprietary files
 include vendor/samsung/s5e8825-common/BoardConfigVendor.mk
+
+COMMON_PATH := device/samsung/s5e8825-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -129,7 +129,7 @@ TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/samsung/s5e8825
 TARGET_KERNEL_CONFIG := s5e8825-unified_defconfig
 
-# Kernel - Modules
+# Kernel Modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/configs/kernel/modules.load))
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
@@ -187,11 +187,10 @@ VENDOR_SECURITY_PATCH := 2025-08-01
 
 # SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
-include device/lineage/sepolicy/exynos/sepolicy.mk
-include device/samsung_slsi/sepolicy/sepolicy.mk
-
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+include device/lineage/sepolicy/exynos/sepolicy.mk
+include device/samsung_slsi/sepolicy/sepolicy.mk
 
 # WiFi
 BOARD_WLAN_DEVICE                := slsi
