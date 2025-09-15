@@ -44,7 +44,6 @@ vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/soundfx/libswdap.so|f50929bb7b17babd5c7758f40f53d6651c252aa2|3df9488370c0ccf8facbd8d5ffdb8d7f6fccd90f
 
 # Audio - Firmware
-vendor/firmware/APBiBF_AUDIO_SLSI.bin
 vendor/firmware/APSV_AUDIO_SLSI.bin
 vendor/firmware/OD_V2.1.6_01_26_QVGA.nnc
 vendor/firmware/OD_V2.3.7_02_05_VGA.nnc
