@@ -349,7 +349,6 @@ sec-battery.ko
 pdic_sm5714.ko
 exynos-bts.ko
 exynos-btsops8825.ko
-exynos-usb-audio-offloading.ko
 abox_adaptation.ko
 snd-soc-rl6231.ko
 snd-soc-rt5665.ko
