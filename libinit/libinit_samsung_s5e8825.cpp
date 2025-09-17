@@ -88,6 +88,14 @@ static const variant_info_t a53xzc = {
     .build_desc = "a53xzc-user 15 AP3A.240905.015.A2 A5360ZCSHFYH1 release-keys"
 };
 
+static const variant_info_t gta4xlswifixx = {
+    .device = "gta4xlswifi",
+    .model = "SM-P620",
+    .name = "gta4xlswifixx",
+    .build_fingerprint = "samsung/gta4xlswifixx/essi:15/AP3A.240905.015.A2/P620XXS7BYH1:user/release-keys",
+    .build_desc = "gta4xlswifixx-user 15 AP3A.240905.015.A2 P620XXS7BYH1 release-keys"
+};
+
 static const variant_info_t m33xktt = {
     .device = "m33xktt",
     .model = "SM-M336K",
@@ -131,6 +139,7 @@ static const std::vector<variant_info_t> variants = {
     a53xksx,
     a53xnsxx,
     a53xzc,
+    gta4xlswifixx,
     m33xktt,
     m34xdxx,
     m34xins,
