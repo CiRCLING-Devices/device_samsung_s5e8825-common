@@ -1,6 +1,6 @@
 # Common proprietary files - from Samsung package version A536BXXSHFYH1 unless pinned
 
-# Audio - from a14xxx - A146BXXU8DYF4
+# Audio - from a14x - A146BXXS9DYH1
 vendor/bin/hw/secaudiohalaidl|f1f0c148e44e90c26be01e67cc45eb05b2190fc5
 vendor/etc/init/secaudiohalaidl.rc|e22b21a141167847a570c9f5c5a7dd8b622ab8ef
 vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml|e6ba4246996de00f7dffca081520f344c9a430a8
