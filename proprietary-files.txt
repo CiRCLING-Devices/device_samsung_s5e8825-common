@@ -116,8 +116,8 @@ vendor/lib64/libwrappergps.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
-# Graphics - from a54x - A546BXXUCDYDB
-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|c4e937bddd63787f391ec52ea453c9c8b4a41834
+# Graphics - from a54x - A546BXXSFDYI1
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|d4bd90eef31afc3d30464461b49fb2fb78d73ec6
 vendor/lib64/hw/vulkan.mali.so|8d5c6634ec83b9d1940eb8327e2d84a2c3c6da56
 
 # Keymint
@@ -149,7 +149,7 @@ vendor/lib64/libfloatingfeature.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 
-# RIL - from a54x - A546BXXSDDYF1
+# RIL - from a54x - A546BXXSFDYI1
 vendor/bin/hw/rild|249bd469620af395bcca58153d40cee6c28bdcb5
 vendor/etc/init/vendor.samsung.rilchip.slsi.rc|9ab6b924d2f5ae56a408a55d67c142e7082a00e0
 vendor/etc/init/vendor.samsung.rild.rc|a4cc7e6d99aa026b4dc438d73b260d4143ae26b6
