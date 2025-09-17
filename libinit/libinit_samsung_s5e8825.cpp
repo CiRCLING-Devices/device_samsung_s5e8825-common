@@ -24,6 +24,14 @@ static const variant_info_t a25zhx = {
     .build_desc = "a25zhx-user 15 AP3A.240905.015.A2 A2560ZHS7CYG4 release-keys"
 };
 
+static const variant_info_t a26xsub = {
+    .device = "a26xs",
+    .model = "SM-A266M",
+    .name = "a26xsub",
+    .build_fingerprint = "samsung/a26xsub/essi:15/AP3A.240905.015.A2/A266MUBS4AYH3:user/release-keys",
+    .build_desc = "a26xsub-user 15 AP3A.240905.015.A2 A266MUBS4AYH3 release-keys"
+};
+
 static const variant_info_t a33xks = {
     .device = "a33x",
     .model = "SM-A336N",
@@ -139,6 +147,7 @@ static const variant_info_t m34xnsxx = {
 static const std::vector<variant_info_t> variants = {
     a25xxx,
     a25zhx,
+    a26xsub,
     a33xks,
     a33xnsdxx,
     a33xub,
