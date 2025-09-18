@@ -227,6 +227,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.front.prebuilt.xml \
     android.hardware.camera.full.prebuilt.xml \
     android.hardware.camera.raw.prebuilt.xml \
+    android.hardware.ethernet.prebuilt.xml \
     android.hardware.location.gps.prebuilt.xml \
     android.hardware.nfc.hce.prebuilt.xml \
     android.hardware.nfc.prebuilt.xml \
