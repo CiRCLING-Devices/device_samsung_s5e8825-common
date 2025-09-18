@@ -265,9 +265,9 @@ PRODUCT_PACKAGES += \
     secril_config_svc \
     sehradiomanager
 
-$(call soong_config_set,cbd,protocol,sipc)
-
 PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
+
+$(call soong_config_set,cbd,protocol,sipc)
 
 # Samsung DAP
 PRODUCT_PACKAGES += SamsungDAP-custom
