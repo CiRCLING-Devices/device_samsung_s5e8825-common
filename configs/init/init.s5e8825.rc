@@ -259,9 +259,6 @@ on post-fs
     # sec log
     chown system log /proc/sec_log
 
-    # Make fsdbg on /dev for filesystem debug info.
-    mkdir /dev/fsdbg 0775 root system
-
 on post-fs-data
     # MST/NFC Switch
     chown system system /dev/mst_ctrl
