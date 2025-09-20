@@ -1,3 +1,7 @@
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
 <compatibility-matrix version="6.0" type="framework">
     <hal format="hidl" optional="true">
         <name>android.hardware.audio</name>
