@@ -29,6 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.QC2Buf=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.QC2V4l2Codec=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.SQLiteLog=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.tzts_daemon=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.TcUtils=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.Tracer=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.TrafficStats=$(VENDOR_LOG_LEVEL) \
