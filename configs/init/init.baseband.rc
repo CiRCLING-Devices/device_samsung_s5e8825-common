@@ -8,10 +8,6 @@ on post-fs-data
     chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
     chown radio system /sys/devices/virtual/misc/umts_dm0/dm_state
 
-    #For cpefs partition
-    mkdir /mnt/vendor/cpefs 0771 radio system
-    mount ext4 /dev/block/by-name/cpefs /mnt/vendor/cpefs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-
     # /mnt/vendor/efs/factory.prop for Dual / Single SIM settings
     chown radio radio /mnt/vendor/efs/factory.prop
     chmod 0600 /mnt/vendor/efs/factory.prop
