@@ -137,7 +137,6 @@ vendor/etc/init/pa_daemon_teegris.rc
 vendor/bin/cass
 vendor/bin/secril_config_svc
 vendor/etc/init/cass.rc
-vendor/etc/init/init.baseband.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_chn.bin
 vendor/etc/plmn_delta_hktw.bin
