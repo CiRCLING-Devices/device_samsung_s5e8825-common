@@ -72,11 +72,11 @@ vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
-# DRM Widevine
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
-vendor/lib64/libwvhidl.so
+# DRM Widevine - from a54x - A546BXXSFDYI1
+vendor/bin/hw/android.hardware.drm-service.widevine|8067253631a71e2ad01abb33cbc9257eda611ad2
+vendor/etc/init/android.hardware.drm-service.widevine.rc|54c79ef531c9c135fa234a8515b3d37f0e1ccc4d
+vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
+vendor/lib64/libwvaidl.so|c736b77f5d065cc03de9e5bbb20c26b6cced8710
 
 # EPIC
 vendor/bin/epic
