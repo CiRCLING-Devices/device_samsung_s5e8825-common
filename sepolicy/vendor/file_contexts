@@ -138,4 +138,3 @@
 
 # Vaultkeeper
 /vendor/bin/vaultkeeperd                                                        u:object_r:vaultkeeperd_exec:s0
-/vendor/bin/vendor\.samsung\.hardware\.security\.vaultkeeper@2\.0-service       u:object_r:vaultkeeperd_exec:s0
