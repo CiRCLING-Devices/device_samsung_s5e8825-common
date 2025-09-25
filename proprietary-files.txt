@@ -192,12 +192,9 @@ vendor/etc/wifi/mx140_t_common.hcf
 
 # Vaultkeeper - from a25x - A256EXXS8CYG3
 vendor/bin/vaultkeeperd|64bf000e4d58c43a1f23220e5b07a8bc4e37a951|b662faa8b5180ad4a3756310e21c7194b38634b5
-vendor/bin/vendor.samsung.hardware.security.vaultkeeper-service|ae95737cf788153cf8791fd8ce7b660accaedd53
 vendor/etc/init/vaultkeeper_common.rc|5fa623fe813eaf19b658257ce9fea94ba8acd1f4
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.vaultkeeper-manifest.xml|525e90a2a6c34f5dc916f21bdedd8d287d1db912
 vendor/lib64/libstork_shared.so|a141efe0b67d1ad8252dfa9780e65e4ad64656f6
 vendor/lib64/libvkservice.so|85fcac9c71a05af9792adb99992acace44e27a60|fe537335d588530413f841dbed70e36bdec8b370
-vendor/lib64/vendor.samsung.hardware.security.vaultkeeper-V1-ndk_platform.so|082a020d08bdaf0a991850ec4bfb9e28b2ab875b
 
 # VNDK - from prebuilts/vndk/v33 - android-15.0.0_r32
 vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
