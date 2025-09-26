@@ -53,13 +53,11 @@ vendor/firmware/dolby.bin
 vendor/firmware/listenbackeffect.bin
 vendor/firmware/volumemonitor.bin
 
-# Camera
-vendor/lib64/libexynoscamera_plugin.so
-
 # Camera - Dependencies
 vendor/lib64/libSEF.quram.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libexynoscamera_cnr_plugin.so
+vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libhwjsqz.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libswcnr.so
