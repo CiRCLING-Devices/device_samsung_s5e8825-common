@@ -634,6 +634,16 @@ on boot
     chown mediacodec system /sys/kernel/gpu/gpu_mm_min_clock
     chmod 0644 /sys/kernel/gpu/gpu_mm_min_clock
 
+    # GPU interactive governor
+    chown system system /sys/devices/platform/10300000.mali/highspeed_clock
+    chown system system /sys/devices/platform/10300000.mali/highspeed_load
+    chmod 0664 /sys/devices/platform/10300000.mali/highspeed_clock
+    chmod 0664 /sys/devices/platform/10300000.mali/highspeed_load
+
+    # GPU governor settings
+    write /sys/devices/platform/10300000.mali/highspeed_clock 702000
+    write /sys/devices/platform/10300000.mali/highspeed_load 80
+
     # Mesh
     chown system system /sys/class/sec/sec_kq_mesh/cache_test
     chown system system /sys/class/sec/sec_kq_mesh/panic
