@@ -156,7 +156,9 @@ on init
     chown system system /dev/mfc_throughput
     chown system system /dev/mfc_throughput_max
     chown system system /dev/gpu_freq_min
+    chmod 0664 /dev/gpu_freq_min
     chown system system /dev/gpu_freq_max
+    chmod 0664 /dev/gpu_freq_max
     chown system system /dev/npu_throughput
     chown system system /dev/npu_throughput_max
     chown system system /dev/device_throughput
