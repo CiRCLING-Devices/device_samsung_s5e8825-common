@@ -322,7 +322,7 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
 
-# WiFi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
@@ -330,13 +330,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
 
-# WiFi - Configuration
+# Wi-Fi - Configuration
 PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
     wpa_supplicant.conf \
     wpa_supplicant_overlay.conf
 
-# WiFi - Init
+# Wi-Fi - Init
 PRODUCT_PACKAGES += init.wifi.rc
 
 # Vibrator
