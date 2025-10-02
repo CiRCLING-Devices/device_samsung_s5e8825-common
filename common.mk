@@ -95,10 +95,6 @@ PRODUCT_PACKAGES += \
     codec2.vendor.base.policy \
     codec2.vendor.ext.policy
 
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(COMMON_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
-
 $(call soong_config_set,openmax,legacy_mfc,true)
 $(call soong_config_set,openmax,USE_CSC_FILTER,true)
 
@@ -192,6 +188,11 @@ PRODUCT_PACKAGES += vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
 # Log Tag
 include $(COMMON_PATH)/vendor_logtag.mk
+
+# Media
+PRODUCT_PACKAGES += \
+    media_codecs_c2.xml \
+    media_codecs_performance_c2.xml
 
 # Memtrack
 PRODUCT_PACKAGES += android.hardware.memtrack-service.samsung-mali
