@@ -282,6 +282,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
+    bootable/deprecated-ota \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/samsung \
@@ -300,9 +301,8 @@ PRODUCT_COPY_FILES += \
 # Touch HAL
 PRODUCT_PACKAGES += vendor.lineage.touch-service.samsung
 
-# Update
+# Updater
 AB_OTA_UPDATER := false
-PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # USB
 PRODUCT_PACKAGES += \
