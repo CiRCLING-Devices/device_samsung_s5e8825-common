@@ -130,6 +130,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.s5e8825 \
     sensors.samsung
 
+# Fingerprint - Init
+PRODUCT_PACKAGES += init.fingerprint.rc
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
@@ -150,19 +153,14 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,samsungHealthVars,enable_suspend,false)
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/fstab.s5e8825:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e8825 \
-    $(COMMON_PATH)/configs/init/fstab.s5e8825:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.s5e8825 \
-    $(COMMON_PATH)/configs/init/init.s5e8825.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.s5e8825.rc \
-    $(COMMON_PATH)/configs/init/init.s5e8825.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.s5e8825.usb.rc \
-    $(COMMON_PATH)/configs/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
-    $(COMMON_PATH)/configs/init/init.recovery.s5e8825.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.s5e8825.rc \
-    $(COMMON_PATH)/configs/init/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.rc \
-    $(COMMON_PATH)/configs/init/init.ril.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ril.rc \
-    $(COMMON_PATH)/configs/init/init.wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wifi.rc \
-    $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+PRODUCT_PACKAGES += \
+    fstab.s5e8825 \
+    init.s5e8825.rc \
+    init.s5e8825.recovery.rc \
+    init.s5e8825.usb.rc \
+    ueventd.s5e8825.rc
 
-$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_s5e8825)
+PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/init/fstab.s5e8825:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e8825
 
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
@@ -174,6 +172,9 @@ PRODUCT_PACKAGES += toolbox.vendor_ramdisk
 
 # Keymint
 PRODUCT_PACKAGES += libshim_crypto
+
+# Libinit
+$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_s5e8825)
 
 # Lineage Health
 PRODUCT_PACKAGES += vendor.lineage.health-service.default
@@ -268,6 +269,11 @@ PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_C
 
 $(call soong_config_set,cbd,protocol,sipc)
 
+# RIL - Init
+PRODUCT_PACKAGES += \
+    init.baseband.rc \
+    init.ril.rc
+
 # Samsung DAP
 PRODUCT_PACKAGES += SamsungDAP-custom
 
@@ -323,6 +329,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
+
+# WiFi - Init
+PRODUCT_PACKAGES += init.wifi.rc
 
 # Vibrator
 PRODUCT_PACKAGES += android.hardware.vibrator-service.samsung
