@@ -270,9 +270,10 @@ PRODUCT_PACKAGES += \
     cbd \
     sehradiomanager
 
-PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
-
 $(call soong_config_set,cbd,protocol,sipc)
+
+# RIL - Radio Configuration
+PRODUCT_PACKAGES += sehradiomanager.conf
 
 # RIL - Init
 PRODUCT_PACKAGES += \
