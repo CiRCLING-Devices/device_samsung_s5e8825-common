@@ -148,14 +148,12 @@ vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|8645b1d3d2e944a38ec07e
 vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|9b3b09c9bc2911b801d0de0caea13476a90f8776
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|611a9f8ca1a46b33471643e200e70ce28f963b75
 
-# RIL - Dependencies
-vendor/lib64/libsecnativefeature.so
-
 # RIL - Dependencies - from a54x - A546BXXSFDYI1
 vendor/bin/cass|936160fcfaaa785cbc4e93c5b87bb48f08a56497
 vendor/etc/mtu-conf.xml|5bac5f518c1573e774758d2133518cc227134099
 vendor/lib64/libengmode_client.so|ea5ddf5cdfc4166c096dad08a43933ec43905203
 vendor/lib64/libfloatingfeature.so|bdf3236d15da454f3db0ae499f8b3bdabc48efa7
+vendor/lib64/libsecnativefeature.so|eca43700e1f9ad9775d24f24e0f8b169aa2198b0
 vendor/lib64/libsemnativecarrierfeature.so|04fd039d7ef5718818cb91d4991453f457fe9896
 
 # Security - Keymint
