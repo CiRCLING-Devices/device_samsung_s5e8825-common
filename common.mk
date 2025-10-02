@@ -183,6 +183,9 @@ $(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/af
 $(call soong_config_set,lineage_health,fast_charge_value_none,1)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 
+# Linker
+PRODUCT_PACKAGES += public.libraries.txt
+
 # Live Display
 PRODUCT_PACKAGES += vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
@@ -261,9 +264,6 @@ PRODUCT_PACKAGES += android.hardware.power-service.pixel-libperfmgr
 
 # Power - Powerhint
 PRODUCT_PACKAGES += powerhint.json
-
-# Public Libraries
-PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # RIL
 PRODUCT_PACKAGES += \
