@@ -307,8 +307,7 @@ PRODUCT_PACKAGES += SpeakerFX
 endif
 
 # Thermal
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/thermal/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json
+PRODUCT_PACKAGES += btcon.json
 
 # Touch HAL
 PRODUCT_PACKAGES += vendor.lineage.touch-service.samsung
