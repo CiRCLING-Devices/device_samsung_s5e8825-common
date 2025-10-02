@@ -202,9 +202,9 @@ PRODUCT_PACKAGES += android.hardware.memtrack-service.samsung-mali
 
 # NFC
 PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
     libnfc-nci \
     libnfc_nci_jni \
-    com.android.nfc_extras \
     Tag
 
 # Overlays
