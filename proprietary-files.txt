@@ -159,8 +159,10 @@ vendor/lib64/libsecnativefeature.so|eca43700e1f9ad9775d24f24e0f8b169aa2198b0
 vendor/lib64/libsemnativecarrierfeature.so|04fd039d7ef5718818cb91d4991453f457fe9896
 
 # Security - Keymint
-vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
+
+# Security - Keymint - Patched Init
+vendor/etc/init/android.hardware.security.keymint-service.samsung.rc|f74c12bda6b1446a61519999d06bf04f3340ba28
 
 # Security - PROCA
 vendor/app/mcRegistry/00060308060501020000000000000000.tabin

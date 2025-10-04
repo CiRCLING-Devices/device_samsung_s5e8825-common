@@ -77,9 +77,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libssl.so', 'libssl-tm.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so')
         .add_needed('libshim_crypto.so'),
-    'vendor/etc/init/android.hardware.security.keymint-service.samsung.rc': blob_fixup()
-        .regex_replace('android\\.hardware\\.security\\.keymint-service\n',
-                       'android.hardware.security.keymint-service.samsung\n'),
     # RIL
     'vendor/lib64/libsec-ril.so': blob_fixup()
         .sig_replace('80 0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
