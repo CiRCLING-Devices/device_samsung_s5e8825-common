@@ -3,6 +3,3 @@ vendor.samsung.hardware.audio.ISecAudioHal/default                              
 
 # DRM - Widevine
 android.hardware.drm.IDrmFactory/widevine                                               u:object_r:hal_drm_widevine_service:s0
-
-# Hermes
-vendor.samsung.hardware.security.hermes.ISehHermesCommand/default                       u:object_r:hermes_command_service:s0

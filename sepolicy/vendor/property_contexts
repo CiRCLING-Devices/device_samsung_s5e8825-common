@@ -4,9 +4,6 @@ persist.vendor.sys.camera.          u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                   u:object_r:vendor_camera_prop:s0
 vendor.hal.camera.                  u:object_r:vendor_camera_prop:s0
 
-# Hermes
-vendor.securehw.available           u:object_r:vendor_hermes_prop:s0
-
 # HWC
 vendor.hwc.                         u:object_r:vendor_hwc_prop:s0
 
