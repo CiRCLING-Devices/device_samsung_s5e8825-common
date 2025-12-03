@@ -65,16 +65,6 @@ vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
-# EPIC
-vendor/bin/epic
-vendor/etc/ems.json
-vendor/etc/ems_parameter.json
-vendor/etc/epic.json
-vendor/lib64/libems_service.so
-vendor/lib64/libepic_helper.so
-vendor/lib64/libexynos_migov.so
-vendor/lib64/libgmc.so
-
 # Fingerprint - Dependencies
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libgf_in_system_lib.so

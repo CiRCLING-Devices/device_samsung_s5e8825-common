@@ -31,12 +31,6 @@ genfscon sysfs /kernel/ems/emstune/aio_tuner                                    
 # IIO
 genfscon sysfs /devices/platform/acpm_mfd_bus@11a00000/i2c-11/11-001f/s2mpu13-gpadc/iio:device0/name                                  u:object_r:sysfs_iio:s0
 
-# Migov
-genfscon sysfs /devices/platform/exynos-migov/migov/running                                                                           u:object_r:migov_file:s0
-genfscon sysfs /devices/platform/exynos-migov/control/set_margin                                                                      u:object_r:migov_file:s0
-genfscon sysfs /devices/platform/exynos-migov/control/fragutil_thr                                                                    u:object_r:migov_file:s0
-genfscon sysfs /devices/platform/exynos-migov/control/control_profile                                                                 u:object_r:migov_file:s0
-
 # RIL
 genfscon proc /simslot_count                                                                                                          u:object_r:proc_simslot_count:s0
 

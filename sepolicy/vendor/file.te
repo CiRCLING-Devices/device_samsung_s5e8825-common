@@ -29,7 +29,6 @@ type sysfs_decon_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_net_mtu_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
 type ems_file, fs_type, sysfs_type;
-type migov_file, fs_type, sysfs_type;
 
 # DRM - Widevine
 type hal_drm_widevine_service, service_manager_type;

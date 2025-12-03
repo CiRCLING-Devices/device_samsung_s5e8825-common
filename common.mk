@@ -124,15 +124,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # DRM
 PRODUCT_PACKAGES += android.hardware.drm-service.clearkey
 
-# EPIC
-PRODUCT_PACKAGES += \
-    libepicoperator \
-    vendor.samsung_slsi.hardware.epic@1.0-impl \
-    vendor.samsung_slsi.hardware.epic@1.0-service
-
-# EPIC - Init
-PRODUCT_PACKAGES += init.s5e8825.epic.rc
-
 # fastbootd
 PRODUCT_PACKAGES += fastbootd
 
