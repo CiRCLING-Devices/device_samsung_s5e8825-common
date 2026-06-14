@@ -13,6 +13,7 @@
 typedef struct variant_info {
   std::string em_model_prop;
   std::string model;
+  std::string marketname;
   std::string name;
   std::string build_fingerprint;
   std::string build_desc;

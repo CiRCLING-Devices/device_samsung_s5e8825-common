@@ -102,6 +102,7 @@ static const std::vector<device_info_t> devices = {
  */
 static const variant_info_t a25xxx = {
   .model = "SM-A256B",
+  .marketname = "Galaxy A25 5G",
   .name = "a25xxx",
   .build_fingerprint = "samsung/a25xxx/essi:15/AP3A.240905.015.A2/A256BXXS8CYG4:user/release-keys",
   .build_desc = "a25xxx-user 15 AP3A.240905.015.A2 A256BXXS8CYG4 release-keys"
@@ -109,6 +110,7 @@ static const variant_info_t a25xxx = {
 
 static const variant_info_t a25zhx = {
   .model = "SM-A2560",
+  .marketname = "Galaxy A25 5G",
   .name = "a25zhx",
   .build_fingerprint = "samsung/a25zhx/essi:15/AP3A.240905.015.A2/A2560ZHS7CYG4:user/release-keys",
   .build_desc = "a25zhx-user 15 AP3A.240905.015.A2 A2560ZHS7CYG4 release-keys"
@@ -116,6 +118,7 @@ static const variant_info_t a25zhx = {
 
 static const variant_info_t a26xsub = {
   .model = "SM-A266M",
+  .marketname = "Galaxy A26 5G",
   .name = "a26xsub",
   .build_fingerprint = "samsung/a26xsub/essi:15/AP3A.240905.015.A2/A266MUBS4AYH3:user/release-keys",
   .build_desc = "a26xsub-user 15 AP3A.240905.015.A2 A266MUBS4AYH3 release-keys"
@@ -123,6 +126,7 @@ static const variant_info_t a26xsub = {
 
 static const variant_info_t a33xks = {
   .model = "SM-A336N",
+  .marketname = "Galaxy A33 5G",
   .name = "a33xks",
   .build_fingerprint = "samsung/a33xks/essi:15/AP3A.240905.015.A2/A336NKSSBFYH1:user/release-keys",
   .build_desc = "a33xks-user 15 AP3A.240905.015.A2 A336NKSSBFYH1 release-keys"
@@ -130,6 +134,7 @@ static const variant_info_t a33xks = {
 
 static const variant_info_t a33xnsdxx = {
   .model = "SM-A336E",
+  .marketname = "Galaxy A33 5G",
   .name = "a33xnsdxx",
   .build_fingerprint = "samsung/a33xnsdxx/essi:15/AP3A.240905.015.A2/A336EDXSEFYH2:user/release-keys",
   .build_desc = "a33xnsdxx-user 15 AP3A.240905.015.A2 A336EDXSEFYH2 release-keys"
@@ -137,6 +142,7 @@ static const variant_info_t a33xnsdxx = {
 
 static const variant_info_t a33xub = {
   .model = "SM-A336M",
+  .marketname = "Galaxy A33 5G",
   .name = "a33xub",
   .build_fingerprint = "samsung/a33xub/essi:15/AP3A.240905.015.A2/A336MUBSEFYH2:user/release-keys",
   .build_desc = "a33xub-user 15 AP3A.240905.015.A2 A336MUBSEFYH2 release-keys"
@@ -144,6 +150,7 @@ static const variant_info_t a33xub = {
 
 static const variant_info_t a33xzh = {
   .model = "SM-A3360",
+  .marketname = "Galaxy A33 5G",
   .name = "a33xzh",
   .build_fingerprint = "samsung/a33xzh/essi:15/AP3A.240905.015.A2/A3360ZHSEFYH2:user/release-keys",
   .build_desc = "a33xzh-user 15 AP3A.240905.015.A2 A3360ZHSEFYH2 release-keys"
@@ -151,6 +158,7 @@ static const variant_info_t a33xzh = {
 
 static const variant_info_t a53xdcm = {
   .model = "SC-53C",
+  .marketname = "Galaxy A53 5G",
   .name = "a53xdcm",
   .build_fingerprint = "samsung/a53xdcm/essi:15/AP3A.240905.015.A2/SC53COMU1DYF2:user/release-keys",
   .build_desc = "a53xdcm-user 15 AP3A.240905.015.A2 SC53COMU1DYF2 release-keys",
@@ -159,6 +167,7 @@ static const variant_info_t a53xdcm = {
 
 static const variant_info_t a53xkdi = {
   .model = "SCG15",
+  .marketname = "Galaxy A53 5G",
   .name = "a53xkdi",
   .build_fingerprint = "samsung/a53xkdi/essi:15/AP3A.240905.015.A2/SCG15KDU1DYF1:user/release-keys",
   .build_desc = "a53xkdi-user 15 AP3A.240905.015.A2 SCG15KDU1DYF1 release-keys",
@@ -167,6 +176,7 @@ static const variant_info_t a53xkdi = {
 
 static const variant_info_t a53xksx = {
   .model = "SM-A536N",
+  .marketname = "Galaxy A53 5G",
   .name = "a53xksx",
   .build_fingerprint = "samsung/a53xksx/essi:15/AP3A.240905.015.A2/A536NKSSCFYH1:user/release-keys",
   .build_desc = "a53xksx-user 15 AP3A.240905.015.A2 A536NKSSCFYH1 release-keys"
@@ -174,6 +184,7 @@ static const variant_info_t a53xksx = {
 
 static const variant_info_t a53xnsxx = {
   .model = "SM-A536E",
+  .marketname = "Galaxy A53 5G",
   .name = "a53xnsxx",
   .build_fingerprint = "samsung/a53xnsxx/essi:15/AP3A.240905.015.A2/A536EXXSHFYI4:user/release-keys",
   .build_desc = "a53xnsxx-user 15 AP3A.240905.015.A2 A536EXXSHFYI4 release-keys"
@@ -181,6 +192,7 @@ static const variant_info_t a53xnsxx = {
 
 static const variant_info_t a53xzc = {
   .model = "SM-A5360",
+  .marketname = "Galaxy A53 5G",
   .name = "a53xzc",
   .build_fingerprint = "samsung/a53xzc/essi:15/AP3A.240905.015.A2/A5360ZHSHFYI1:user/release-keys",
   .build_desc = "a53xzc-user 15 AP3A.240905.015.A2 A5360ZHSHFYI1 release-keys"
@@ -188,6 +200,7 @@ static const variant_info_t a53xzc = {
 
 static const variant_info_t gta4xlsxx = {
   .model = "SM-P625",
+  .marketname = "Galaxy Tab S6 Lite",
   .name = "gta4xlsxx",
   .build_fingerprint = "samsung/gta4xlsxx/essi:15/AP3A.240905.015.A2/P625XXS6BYH1:user/release-keys",
   .build_desc = "gta4xlsxx-user 15 AP3A.240905.015.A2 P625XXS6BYH1 release-keys"
@@ -195,6 +208,7 @@ static const variant_info_t gta4xlsxx = {
 
 static const variant_info_t gta4xlswifixx = {
   .model = "SM-P620",
+  .marketname = "Galaxy Tab S6 Lite",
   .name = "gta4xlswifixx",
   .build_fingerprint = "samsung/gta4xlswifixx/essi:15/AP3A.240905.015.A2/P620XXS7BYH1:user/release-keys",
   .build_desc = "gta4xlswifixx-user 15 AP3A.240905.015.A2 P620XXS7BYH1 release-keys"
@@ -202,6 +216,7 @@ static const variant_info_t gta4xlswifixx = {
 
 static const variant_info_t m33xins = {
   .model = "SM-M336BU",
+  .marketname = "Galaxy M33 5G",
   .name = "m33xins",
   .build_fingerprint = "samsung/m33xins/essi:15/AP3A.240905.015.A2/M336BUXXSDFYH1:user/release-keys",
   .build_desc = "m33xins-user 15 AP3A.240905.015.A2 M336BUXXSDFYH1 release-keys",
@@ -209,6 +224,7 @@ static const variant_info_t m33xins = {
 
 static const variant_info_t m33xktt = {
   .model = "SM-M336K",
+  .marketname = "Galaxy M33 5G",
   .name = "m33xktt",
   .build_fingerprint = "samsung/m33xktt/essi:15/AP3A.240905.015.A2/M336KKSSBFH1:user/release-keys",
   .build_desc = "m33xktt-user 15 AP3A.240905.015.A2 M336KKSSBFH1 release-keys",
@@ -216,6 +232,7 @@ static const variant_info_t m33xktt = {
 
 static const variant_info_t m34xdxx = {
   .model = "SM-M346B1",
+  .marketname = "Galaxy M34 5G",
   .name = "m34xdxx",
   .build_fingerprint = "samsung/m34xdxx/essi:15/AP3A.240905.015.A2/M346B1DXS8DYH1:user/release-keys",
   .build_desc = "m34xdxx-user 15 AP3A.240905.015.A2 M346B1DXS8DYH1 release-keys"
@@ -223,6 +240,7 @@ static const variant_info_t m34xdxx = {
 
 static const variant_info_t m34xins = {
   .model = "SM-E346B",
+  .marketname = "Galaxy F34",
   .name = "m34xins",
   .build_fingerprint = "samsung/m34xins/essi:15/AP3A.240905.015.A2/E346BXXS8DYH1:user/release-keys",
   .build_desc = "m34xins-user 15 AP3A.240905.015.A2 E346BXXS8DYH1 release-keys"
@@ -230,6 +248,7 @@ static const variant_info_t m34xins = {
 
 static const variant_info_t m34xnsxx = {
   .model = "SM-M346B",
+  .marketname = "Galaxy M34 5G",
   .name = "m34xnsxx",
   .build_fingerprint = "samsung/m34xnsxx/essi:15/AP3A.240905.015.A2/M346BXXS8DYH1:user/release-keys",
   .build_desc = "m34xnsxx-user 15 AP3A.240905.015.A2 M346BXXS8DYH1 release-keys"
@@ -264,6 +283,7 @@ void vendor_load_properties() {
   std::string model = GetProperty("ro.boot.em.model", "");
   set_ro_boot_prop("product.hardware.sku", model);
   set_ro_build_prop("model", model, true);
+  set_ro_build_prop("marketname", model, true);
   set_ro_build_prop("product", model, false);
 
   std::string nfc_chip = GetProperty("ro.vendor.nfc.feature.chipname", "");
