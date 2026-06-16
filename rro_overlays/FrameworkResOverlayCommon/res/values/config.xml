@@ -51,9 +51,6 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDoze">3</integer>
 
-    <!-- If AOD can show an ambient version of the wallpaper -->
-    <bool name="config_dozeSupportsAodWallpaper">false</bool>
-
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
          when adapting to brighter or darker environments.  This parameter controls how quickly
