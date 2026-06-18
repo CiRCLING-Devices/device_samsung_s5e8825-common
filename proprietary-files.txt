@@ -141,7 +141,6 @@ vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|a2f0be5b802aa317d05f388
 vendor/etc/mtu-conf.xml|5bac5f518c1573e774758d2133518cc227134099
 vendor/lib64/libengmode_client.so|29f285027dc728d20eaa794d9f39a2fcdb4dd90c
 vendor/lib64/libfloatingfeature.so|764ca3e2137a0e0e936743192223ebfa61479fd0
-vendor/lib64/libprotobuf-cpp-full-21.7.so|24ae91e4333a44a3f1646af92c90d63e58a57956
 vendor/lib64/libsecnativefeature.so|984289af7a89aec3d3a9ac31a5418c948f69cba1
 vendor/lib64/libsemnativecarrierfeature.so|3a8102145028c96e7120ca5cb49b56b0f4b91f32
 vendor/lib64/libvkmanager_vendor.so|bc65170c3207a897e29f7c3ee4c590b733db5de2|78c51eca85aa0ff01953c84f0c87c0b767d7030a
