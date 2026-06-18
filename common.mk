@@ -311,14 +311,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
     hardware/samsung_slsi/libbt
 
-# SpeakerFX
-ifneq ($(wildcard packages/apps/SpeakerFX),)
-PRODUCT_PACKAGES += SpeakerFX
-endif
-
-# Thermal
-PRODUCT_PACKAGES += btcon.json
-
 # Touch HAL
 PRODUCT_PACKAGES += vendor.lineage.touch-service.samsung
 
