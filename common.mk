@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
-$(call soong_config_set,android_hardware_audio,run_64bit,true)
+$(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
 
 # Audio - Configuration
 PRODUCT_PACKAGES += \
@@ -80,8 +80,8 @@ PRODUCT_PACKAGES += init.s5e8825.bluetooth.rc
 PRODUCT_PACKAGES += android.hardware.camera.provider-service.samsung
 
 $(call soong_config_set,samsungCameraVars,extra_ids,60)
-$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
-$(call soong_config_set,samsungCameraVars,usage_64bit,true)
+$(call soong_config_set_bool,samsungCameraVars,needs_sec_reserved_field,true)
+$(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
 
 # Camera - Init
 PRODUCT_PACKAGES += init.s5e8825.camera.rc
