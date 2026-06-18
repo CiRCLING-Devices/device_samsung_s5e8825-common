@@ -141,9 +141,6 @@ PRODUCT_PACKAGES += \
 # GPS - Init
 PRODUCT_PACKAGES += init.s5e8825.gps.rc
 
-# Graphics
-$(call soong_config_set,exynos_hwc,force_client_video,true)
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.s5e8825 \
