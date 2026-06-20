@@ -14,6 +14,8 @@ allow hal_camera_default vendor_bufcon_device:chr_file { open read write ioctl }
 allow hal_camera_default vertex_device:chr_file rw_file_perms;
 allow hal_camera_default sysfs_npu_version:file r_file_perms;
 
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
+
 binder_call(hal_camera_default, system_server);
 binder_call(system_server, hal_camera_default);
 
