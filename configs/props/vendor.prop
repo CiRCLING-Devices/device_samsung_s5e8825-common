@@ -141,6 +141,7 @@ ro.surface_flinger.support_kernel_idle_timer=true
 
 # USB
 ro.usb.uvc.disable_video_encode_flag=true
+vendor.usb.uvc.payload_transfer_size=1024
 
 # Wi-Fi
 wifi.direct.interface=p2p0
