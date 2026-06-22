@@ -42,7 +42,9 @@ PRODUCT_PACKAGES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
-PRODUCT_PACKAGES += tinymix
+PRODUCT_PACKAGES += \
+    tinymix \
+    tinycap
 
 $(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
 
