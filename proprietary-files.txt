@@ -9,7 +9,6 @@ vendor/etc/mixer_usb_default.xml|fa60c6ec41a31d84935c006515322edb1b4cc0c2
 vendor/etc/mixer_usb_gray.xml|a08648ea579c4dd1b25c676f1523c813f6cfdf61
 vendor/etc/mixer_usb_white.xml|4d69d830f29c8765bfb18ca83d45be38295ae85f
 vendor/etc/sec_audio_volume_curve.xml|e689487098c8317db2d0e593e8fb281e92860cb9
-vendor/etc/usb_audio_policy_configuration.xml|1123a3a29c1fd176d14417861dbf51ee893ef523
 vendor/lib64/hw/audio.primary.s5e8535.so:vendor/lib64/hw/audio.primary.s5e8825.so;FIX_SONAME|a1f545044aada7e41872ba1a821ef04ae0387a51|fbc2c502a3d92e7469493632b3fa6cdeb0e34636
 vendor/lib64/hw/audio.sec_primary.default.so|d3d397754596849c71178cf3eaeee96a05a52d3b
 vendor/lib64/hw/libsecaudiohal_aidl.so|c3782f74ba5ca6d2bde708d17a986b65723b816f
