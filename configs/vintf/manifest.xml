@@ -92,13 +92,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl">
-        <name>android.hardware.security.keymint</name>
-        <interface>
-            <name>IRemotelyProvisionedComponent</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="aidl" override="true">
         <name>android.hardware.security.secureclock</name>
         <interface>
