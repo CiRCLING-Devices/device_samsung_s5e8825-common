@@ -63,6 +63,18 @@ vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
+# Display - Calibration
+vendor/etc/dqe/calib_data_atc.xml
+vendor/etc/dqe/calib_data_bypass.xml
+vendor/etc/dqe/calib_data_colormode0_hx83102e_gta4xls.xml
+vendor/etc/dqe/calib_data_colormode0.xml
+vendor/etc/dqe/calib_data_colortemp.xml
+vendor/etc/dqe/calib_data_eyetemp.xml
+vendor/etc/dqe/calib_data_rgbgain.xml
+vendor/etc/dqe/calib_data_skincolor.xml
+vendor/etc/dqe/calib_data_whitepoint.xml
+vendor/etc/dqe/DQE_coef_data.xml
+
 # Fingerprint - Dependencies
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libgf_in_system_lib.so
