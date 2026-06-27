@@ -101,6 +101,11 @@ vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|d4bd90eef31afc3d30464461b49fb2fb78d73ec6
 vendor/lib64/hw/vulkan.mali.so|8d5c6634ec83b9d1940eb8327e2d84a2c3c6da56
 
+# Graphics - HDR
+vendor/lib64/libdpuhdr10p_8825.so
+vendor/lib64/libhdr10p_meta_plugin_default.so
+vendor/lib64/libhdr_plugin_exynos8825.so
+
 # Media - Codecs
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
