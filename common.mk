@@ -253,7 +253,18 @@ PRODUCT_PACKAGES += \
     Tag
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+PRODUCT_PACKAGES += \
+    ApertureOverlayCommon \
+    CarrierConfigOverlayCommon \
+    DeviceAsWebcamOverlayCommon \
+    FrameworkResOverlayCommon \
+    LineageSDKOverlayCommon \
+    SettingsOverlayCommon \
+    SystemUIOverlayCommon \
+    TelephonyOverlayCommon \
+    WiFiOverlayCommon
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Permissions
 PRODUCT_COPY_FILES += \
