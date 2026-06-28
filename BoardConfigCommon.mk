@@ -73,6 +73,8 @@ BOARD_USES_DISPLAY_COLOR_INTERFACE := true
 BOARD_USES_HWC_CPU_PERF_MODE := false
 BOARD_USES_VIRTUAL_DISPLAY := true
 HWC_SUPPORT_COLOR_TRANSFORM := true
+BOARD_LIBHDR_PLUGIN ?= //vendor/samsung/s5e8825-common:libhdr_plugin_exynos8825
+BOARD_LIBHDR10P_META_PLUGIN ?= //vendor/samsung/s5e8825-common:libhdr10p_meta_plugin_default
 
 # DTB
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/s5e8825.cfg
