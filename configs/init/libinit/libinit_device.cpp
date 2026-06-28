@@ -26,6 +26,7 @@ void search_device(const std::vector<device_info_t> devices) {
 
 void set_device_props(const device_info_t device) {
   property_override("bluetooth.device.default_name", device.full_name);
+  property_override("ro.product.marketname", device.full_name);
 
   set_ro_build_prop("device", device.codename, true);
 
