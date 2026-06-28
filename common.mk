@@ -329,7 +329,7 @@ PRODUCT_PACKAGES += sehradiomanager.conf
 PRODUCT_PACKAGES += init.s5e8825.ril.rc
 
 # Samsung DAP
-PRODUCT_PACKAGES += SamsungDAP-custom
+PRODUCT_PACKAGES += SamsungDAP
 
 # Samsung Doze
 PRODUCT_PACKAGES += SamsungDoze
