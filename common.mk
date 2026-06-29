@@ -204,15 +204,6 @@ PRODUCT_PACKAGES += \
 # Kernel Modules
 PRODUCT_PACKAGES += toolbox.vendor_ramdisk
 
-# Neural Networks
-PRODUCT_PACKAGES += android.hardware.neuralnetworks@1.3-service.eden-drv
-
-# Neural Networks - Runtime
-PRODUCT_PACKAGES += vendor.samsung_slsi.hardware.eden_runtime@1.0-service
-
-# Neural Networks - Configuration
-PRODUCT_PACKAGES += enn_preset.json
-
 # Libinit
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH)/configs/init/libinit:libinit_s5e8825)
 

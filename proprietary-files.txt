@@ -120,48 +120,6 @@ vendor/lib64/libwvaidl.so|c736b77f5d065cc03de9e5bbb20c26b6cced8710|0291814fb9f57
 # Media - DRM Widevine - Dependencies - from a54x - A546BXXSFDYI1
 vendor/lib64/liboemcrypto.so|0f23089c54ce5ca89d1cd0ff3356c1debc28968e
 
-# Neural Networks - Dependencies
-vendor/etc/eden/gpu/eden_kernel_64.bin
-vendor/lib64/libcommon.so
-vendor/lib64/libcommon_graphgen_export.so
-vendor/lib64/libcrane_compiler.so
-vendor/lib64/libdove_compiler.so
-vendor/lib64/libeden_model.so
-vendor/lib64/libeden_nn.so
-vendor/lib64/libeden_osal.so
-vendor/lib64/libeden_profiler.so
-vendor/lib64/libeden_rt.so
-vendor/lib64/libeden_ud_cpu.so
-vendor/lib64/libeden_ud_dsp.so
-vendor/lib64/libeden_ud_gpu.so
-vendor/lib64/libeden_ud_npu.so
-vendor/lib64/libeden_xtool.so
-vendor/lib64/libenn_dsp_dal.so
-vendor/lib64/libenn_dsp_fw_graph_parser.so
-vendor/lib64/libenn_dsp_kernels_cpu.so
-vendor/lib64/libgraphgen_ann_import.so
-vendor/lib64/libgraphgen_ann_import_s.so
-vendor/lib64/libgraphgen_ann_nnc.so
-vendor/lib64/libgraphgen_api.so
-vendor/lib64/libgraphgen_export.so
-vendor/lib64/libgraphgen_import.so
-vendor/lib64/libgraphgen_intermediate_process.so
-vendor/lib64/libgraphgen_misc.so
-vendor/lib64/libgraphgen_network.so
-vendor/lib64/libir.so
-vendor/lib64/libnpu_compiler.so
-vendor/lib64/libnpuc_api.so
-vendor/lib64/libnpuc_backend.so
-vendor/lib64/libnpuc_cmdq.so
-vendor/lib64/libnpuc_common.so
-vendor/lib64/libnpuc_controller.so
-vendor/lib64/libnpuc_frontend.so
-vendor/lib64/libnpuc_graph.so
-vendor/lib64/libnpuc_template.so
-vendor/lib64/libsait_npu_compiler.so
-vendor/lib64/libtoco_graphgen_export.so
-vendor/lib64/libvpl.so
-
 # NFC
 vendor/etc/init/init.nfc.samsung.rc
 

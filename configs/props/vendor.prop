@@ -101,14 +101,6 @@ ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.metadata.method=dm-default-key
 
-# Neural Networks
-log.tag.EDEN=I
-ro.vendor.eden.core_mask=112
-ro.vendor.eden.devices=CPU1_GPU1_NPU1
-ro.vendor.eden.npu.version.path=/sys/devices/platform/npu_exynos/version
-ro.vendor.eden.mnonm=32
-ro.vendor.eden.mrs=16
-
 # Perf
 vendor.perf.framepacing.enable=1
 
