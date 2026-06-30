@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version A536BXXSHGYJ3, unless pinned
+# Common proprietary files - from Samsung package version A536BXXSMGZE1, unless pinned
 
 # Audio - Configuration
 vendor/etc/audio_board_info.xml
