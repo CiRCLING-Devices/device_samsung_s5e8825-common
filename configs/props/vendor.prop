@@ -132,6 +132,7 @@ debug.sf.enable_gl_backpressure=false
 ro.surface_flinger.support_kernel_idle_timer=true
 
 # USB
+ro.usb.uvc.enabled=true
 ro.usb.uvc.disable_video_encode_flag=true
 vendor.usb.uvc.payload_transfer_size=1024
 
