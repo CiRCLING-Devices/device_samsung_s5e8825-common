@@ -243,7 +243,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayCommon \
     CarrierConfigOverlayCommon \
-    DeviceAsWebcamOverlayCommon \
     FrameworkResOverlayCommon \
     LineageSDKOverlayCommon \
     SettingsOverlayCommon \
