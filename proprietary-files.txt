@@ -30,10 +30,22 @@ vendor/lib64/libspeakercalibration.so|2e2364dd880a61d6311334879203955f899107a5
 vendor/lib64/vendor.samsung.hardware.audio-V1-ndk.so|1a9524ea56a6d6e0649fd18972a9027ad6254a9c
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V1-ndk.so|e860ba5f7fe9ddcfef71dc7ec21f3cfc35a1c266
 
+# Audio - Configuration
+vendor/etc/audio_board_info.xml
+vendor/etc/mixer_usb_default.xml
+vendor/etc/mixer_usb_gray.xml
+vendor/etc/mixer_usb_white.xml
+
 # Audio - Dolby Atmos
 vendor/etc/dolby/dax-default.xml
+
+# Audio - Effects
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
 vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libmyspace.so
 
 # Audio - Dolby Atmos - from a55x - A556EXXSABYI3
 vendor/lib64/soundfx/libswdap.so|a223aafe58e642a2ac228e47898c9bc3b7618c45|97d83696641804fa58e745acab2ce051cc47bec7
