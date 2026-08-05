@@ -70,12 +70,6 @@
         "target_path": "kernel/samsung/s5e8825"
     },
     {
-        "remote": "circle",
-        "repository": "packages_apps_PhhIms",
-        "target_path": "packages/apps/PhhIms",
-        "branch": "16.2"
-    },
-    {
         "repository": "vendor_samsung_s5e8825-common",
         "target_path": "vendor/samsung/s5e8825-common"
     }
