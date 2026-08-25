@@ -5,9 +5,10 @@
         "branch": "lineage-23.2"
     },
     {
+        "remote": "circle",
         "repository": "LineageOS/android_hardware_samsung",
         "target_path": "hardware/samsung",
-        "branch": "lineage-23.2"
+        "branch": "16.2"
     },
     {
         "repository": "LineageOS/android_hardware_samsung_slsi_fm",
